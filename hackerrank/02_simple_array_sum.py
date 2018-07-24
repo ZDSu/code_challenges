@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/simple-array-sum/problem
+
 #!/bin/python3
 
 import os
