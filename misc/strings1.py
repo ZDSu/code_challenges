@@ -12,7 +12,7 @@ def single_element(arr):
     last = len(arr) - 1
 
     def binary_search(first, last):
-        mid = (first + last) // 2
+        mid =  (first + last) // 2
     
         # even index
         if mid % 2 == 0:
@@ -28,7 +28,9 @@ def single_element(arr):
             if arr[mid] != arr[mid + 1] and arr[mid] != arr[mid - 1]:
                 return arr[mid]
             elif arr[mid] == arr[mid - 1]:
-                first = mid - 1
+                first = mid + 1
             else:
-                last = mid + 1
+                last = mid - 1
+        binary_search(first, last)
+    binary_search(first, last)
             
