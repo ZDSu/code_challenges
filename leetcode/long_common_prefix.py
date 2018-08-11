@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/longest-common-prefix/
-# https://leetcode.com/problems/longest-common-prefix/solution/
+# https://leetcode.com/articles/longest-common-prefix/
 
 
 class Solution:
