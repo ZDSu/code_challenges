@@ -41,3 +41,19 @@ class Solution:
 
 
 # test cases:  '[', '}' and examples
+
+# another solution (with help from dicussion); has longer runtime but less lines of code
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if len(s) % 2 == 0:
+            for i in range(len(s) // 2):
+                s = s.replace("()", "")
+                s = s.replace("{}", "")
+                s = s.replace("[]", "")
+            if s == "":
+                return True
+        return False
