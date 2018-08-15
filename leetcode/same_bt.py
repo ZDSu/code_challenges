@@ -59,3 +59,24 @@ class Solution(object):
 # bool isSameTree(struct TreeNode* p, struct TreeNode* q) {
 #   return !p ? !q : q && p->val == q->val && isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
 # }
+
+
+# another shorter python solution:
+def isSameTree(self, p, q):
+    stack = []
+    stack.append((p,q))
+    while stack:
+        p, q = stack.pop()
+        if not p and not q:
+            continue
+
+	if p and q:   
+	    if p.val != q.val:
+		return False
+	    else:
+	        stack.append((p.left, q.left))
+	        stack.append((p.right, q.right))
+	else:
+	    return False
+
+    return True
