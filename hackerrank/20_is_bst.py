@@ -43,3 +43,27 @@ def check_binary_search_tree_(root):
         return 'Yes'
     
     return inOrder(root)
+
+
+# still not passing!
+def check_binary_search_tree_(root):
+    first = 0
+
+    def inOrder(node=None):
+        nonlocal first
+        if node:
+            inOrder(node.left)
+            if node.data <= first:
+                return 'No'
+            else:
+                first = node.data
+            if node.left:
+                if node.left.data >= node.data:
+                    return 'No'
+            if node.right:
+                if node.right.data <= node.data:
+                    return 'No'
+            inOrder(node.right)
+        return 'Yes'
+    
+    return inOrder(root)
