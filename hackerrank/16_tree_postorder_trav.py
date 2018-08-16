@@ -27,3 +27,11 @@ def postOrder(root):
     _walk(root)
     
     return print(traverse[:-1])
+
+# simpler
+def postOrder(root):
+    #Write your code here
+    if root:
+        postOrder(root.left)
+        postOrder(root.right)
+        print(root.info, end=' ')

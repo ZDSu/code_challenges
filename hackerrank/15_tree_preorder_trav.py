@@ -27,3 +27,12 @@ def preOrder(root):
     _walk(root)
     
     return print(traverse[:-1])
+
+
+# simpler
+def preOrder(root):
+    #Write your code here
+    if root:
+        print(root.info, end = ' ')
+        preOrder(root.left)
+        preOrder(root.right)
