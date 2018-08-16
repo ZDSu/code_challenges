@@ -19,9 +19,4 @@ class Solution:
             list2 = [current.val] + list2
             current = current.next
 
-        current = head
-        for i in range(len(list2) // 2):
-            if current.val != list2[i]:
-                return False
-            current = current.next
-        return True
+        return list2 == list2[::-1]
