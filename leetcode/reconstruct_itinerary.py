@@ -18,9 +18,16 @@ class Solution(object):
                 flights[dep].append(arr)
                 flights[dep] = sorted(flights[dep])
         
-        for i in range(len(tickets)):
-            start = flights[start].pop(0)
-            itinerary.append(start)
+        for i in range(len(tickets) - 1):
+            next = flights[start][0]
+            if next in flights:
+                start = flights[start].pop(0)
+                itinerary.append(start)
+            else:
+                start = flights[start].pop(1)
+                itinerary.append(start)
+        itinerary.append(flights[start].pop(0))
+        
         return itinerary
 
 
