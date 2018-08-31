@@ -7,9 +7,8 @@ class Solution(object):
         :type tickets: List[List[str]]
         :rtype: List[str]
         """    
-        itinerary = ['JFK']
+        itinerary = []
         flights = {}
-        start = 'JFK'
             
         for dep, arr in tickets:
             if dep not in flights:
@@ -17,16 +16,16 @@ class Solution(object):
             else:
                 flights[dep].append(arr)
                 flights[dep] = sorted(flights[dep])
-        
-        for i in range(len(tickets) - 1):
-            next = flights[start][0]
-            if next in flights:
-                start = flights[start].pop(0)
-                itinerary.append(start)
-            else:
-                start = flights[start].pop(1)
-                itinerary.append(start)
-        itinerary.append(flights[start].pop(0))
+
+        def makeItin(start):
+            nonlocal itinerary, flights
+            if start in flights:
+                ends = flights[start]
+                while ends:
+                    makeItin(ends.pop(0))
+            itinerary.insert(0, start)
+
+        makeItin('JFK')
         
         return itinerary
 
@@ -36,6 +35,6 @@ class Solution(object):
 # findItinerary([["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"],["SJC","JFK"],["JFK","ZBC"]])
 
 # [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]] should return ["JFK","NRT","JFK","KUL"]
-# JS solution: https://goo.gl/JwnyVJ  builds itinerary backwards
+# JS solution: https://goo.gl/JwnyVJ  builds itinerary backwards; used the helper function in this code to get a python solution
 
 # [["EZE","TIA"],["EZE","HBA"],["AXA","TIA"],["JFK","AXA"],["ANU","JFK"],["ADL","ANU"],["TIA","AUA"],["ANU","AUA"],["ADL","EZE"],["ADL","EZE"],["EZE","ADL"],["AXA","EZE"],["AUA","AXA"],["JFK","AXA"],["AXA","AUA"],["AUA","ADL"],["ANU","EZE"],["TIA","ADL"],["EZE","ANU"],["AUA","ANU"]]
