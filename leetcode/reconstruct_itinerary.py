@@ -29,3 +29,6 @@ class Solution(object):
 # findItinerary([["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"],["SJC","JFK"],["JFK","ZBC"]])
 
 # [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]] should return ["JFK","NRT","JFK","KUL"]
+# JS solution: https://goo.gl/JwnyVJ  builds itinerary backwards
+
+# [["EZE","TIA"],["EZE","HBA"],["AXA","TIA"],["JFK","AXA"],["ANU","JFK"],["ADL","ANU"],["TIA","AUA"],["ANU","AUA"],["ADL","EZE"],["ADL","EZE"],["EZE","ADL"],["AXA","EZE"],["AUA","AXA"],["JFK","AXA"],["AXA","AUA"],["AUA","ADL"],["ANU","EZE"],["TIA","ADL"],["EZE","ANU"],["AUA","ANU"]]
