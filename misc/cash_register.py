@@ -36,8 +36,8 @@ Expected Output Download Test OutputFIVE
 
 
 def register(pp, ch):
-    pp = pp * 100
-    ch = ch * 100
+    pp = int(pp * 100)
+    ch = int(ch * 100)
     change = []
 
     if ch < pp:
@@ -84,7 +84,7 @@ def register(pp, ch):
             change.append('PENNY')
             remainder -= 1
 
-    return ','.join(change)
+    return ','.join(sorted(change))
 
 
 # in JS, the while check then changes to `(ch - pp) < 1` because numbers in JS are floats (there is no integer)
