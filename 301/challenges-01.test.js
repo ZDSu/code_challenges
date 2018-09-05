@@ -55,7 +55,7 @@ const addCurve = (arr) => {
     arr[i] *= 1.05;
   }
   return arr;
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -66,7 +66,7 @@ const addCurve = (arr) => {
 // The speaker function should return the string in all uppercase letters only by invoking the callback.
 // ------------------------------------------------------------------------------------------------
 
-const greeting = (word) => {
+const greeting = word => {
   // Solution code here...
   return word.toUpperCase();
 };
@@ -96,15 +96,14 @@ const speaker = (message, callback) => {
 const addValues = (arr, value) => {
   // Solution code here...
   arr.push(value);
-  return arr;
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  while (times > 0) {
+  for (let i = 0; i < times; i++) {
     callback(arr, num);
-    times--;
-  } return arr;
+  } 
+  return arr;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -189,7 +188,7 @@ const createList = (availableItems) => {
   // Solution code here...
   const groceries = [];
   availableItems.forEach(item => {
-    if (item.available === true) groceries.push(item.name);
+    if (item.available) groceries.push(item.name);
   });
   return groceries;
 };
