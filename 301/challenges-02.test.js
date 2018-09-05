@@ -28,10 +28,14 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (hours, stores) => {
   // Solution code here...
-
+  const hourlySales = [];
+  for (let i = 0; i < hours.length; i++) {
+    hourlySales.push(stores[0][i] + stores[1][i] + stores[2][i] + stores[3][i] + stores[4][i]);
+  }
+// or using forEach():
+//   hours.forEach((hour, i) => hourlySales.push(stores[0][i] + stores[1][i] + stores[2][i] + stores[3][i] + stores[4][i]));
+  return hourlySales;
 };
-
-
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -46,6 +50,10 @@ const grandTotal = (hours, stores) => {
 
 const salesData = (data) => {
   // Solution code here...
+  const hourlySalesObj = [];
+  data.forEach((cookies, i) => hourlySalesObj.push({sales: `${cookies} cookies`, time: `${hoursOpen[i]}`})
+  );
+  return hourlySalesObj;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -62,6 +70,14 @@ const salesData = (data) => {
 
 const giveValentines = (list) => {
   // Solution code here...
+  const messages = [];
+  for (let name of list) {
+    for (let person of list) {
+      if (name === person) continue;
+      messages.push(`${name} gives a Valentine to ${person}.`);
+    }
+  }
+  return messages;
 };
 
 // ------------------------------------------------------------------------------------------------
