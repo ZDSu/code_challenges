@@ -9,7 +9,8 @@
 
 const getKeys = (obj) => {
   // Solution code here...
-}
+  return Object.keys(obj);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -20,7 +21,8 @@ const getKeys = (obj) => {
 
 const getValues = (obj) => {
   // Solution code here...
-}
+  return Object.values(obj);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
@@ -31,7 +33,8 @@ const getValues = (obj) => {
 
 const getEntries = (obj) => {
   // Solution code here...
-}
+  return Object.entries(obj);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -49,7 +52,8 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getFrom = (obj, property) => {
   // Solution code here...
-}
+  return Object[property](obj);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -103,11 +107,12 @@ let characters = [
     children: [],
     house: 'Snow'
   }
-]
+];
 
 const totalCharacters = (arr) => {
   // Solution code here...
-}
+  return getFrom(arr, 'keys').length;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
@@ -118,7 +123,11 @@ const totalCharacters = (arr) => {
 
 const getHouses = (arr) => {
   // Solution code here...
-}
+  const houses = [];
+  let objs = getFrom(arr, 'values');
+  objs.forEach(obj => houses.push(obj.house));
+  return houses;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -129,7 +138,15 @@ const getHouses = (arr) => {
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-}
+  let children;
+  let chars = getFrom(arr, 'values');
+  chars.forEach(char => {
+    if (char.name === character) {
+      children = char.children.length > 0 ? true : false;
+    }
+  });
+  return children;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
@@ -141,7 +158,15 @@ const hasChildrenValues = (arr, character) => {
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
-}
+  let children;
+  let pairs = getFrom(arr, 'entries');
+  pairs.forEach(pair => {
+    if (pair[1].name === character) {
+      children = pair[1].children.length > 0 ? true : false;
+    }
+  });
+  return children;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
@@ -153,7 +178,17 @@ const hasChildrenEntries = (arr, character) => {
 
 const houseSize = (arr) => {
   // Solution code here...
-}
+  const houses = [];
+  let objs = getFrom(arr, 'values');
+  objs.forEach(obj => {
+    let members = 0;
+    if (obj.name) members++;
+    if (obj.spouse) members++;
+    if (obj.children) members += obj.children.length;
+    houses.push({house: obj.house, members: members});
+  });
+  return houses;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
@@ -171,7 +206,17 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
   // Solution code here...
-}
+  const houses = [];
+  let objs = getFrom(arr, 'values');
+  objs.forEach(obj => {
+    let members = 0;
+    if (obj.name) members++;
+    if (obj.spouse && !deceasedSpouses.includes(obj.spouse)) members++;
+    if (obj.children) members += obj.children.length;
+    houses.push({house: obj.house, members: members});
+  });
+  return houses;
+};
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
