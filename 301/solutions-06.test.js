@@ -149,7 +149,7 @@ const hasChildrenValues = (arr, character) => {
   //<solution>
   let children = 0;
 
-  getFrom(characters, 'values').forEach(person => {
+  getFrom(arr, 'values').forEach(person => {
     if(person.name === character) {
       children = person.children.length > 0 ? true : false;
     }
@@ -171,7 +171,7 @@ const hasChildrenEntries = (arr, character) => {
   //<solution>
   let children = 0;
 
-  getFrom(characters, 'entries').forEach(item => {
+  getFrom(arr, 'entries').forEach(item => {
     item.forEach(person => {
       if(person.name === character) {
         children = person.children.length > 0 ? true : false;
