@@ -16,6 +16,7 @@
 
 const isNum = (num) => {
   // Solution code here...
+  return /[0-9]/.test(num);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -29,6 +30,7 @@ const isNum = (num) => {
 
 const isCapitalized = (string) => {
   // Solution code here...
+  return string.match(/[A-Z][a-zA-Z]*/g);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -40,6 +42,13 @@ const isCapitalized = (string) => {
 
 const citiesAtoJ = (cities) => {
   // Solution code here...
+  const result = [];
+  for (let city of cities) {
+    if (/^[A-J][A-Za-z]*/g.test(city)) {
+      result.push(city);
+    }
+  }
+  return result;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -56,6 +65,7 @@ const citiesAtoJ = (cities) => {
 
 const matchMonth = (input) => {
   // Solution code here...
+  input.match(/oct(ober)/i);
 };
 
 // ------------------------------------------------------------------------------------------------
