@@ -11,6 +11,10 @@
 
 const countNumberOfElements = (input) => {
   // Solution code here...
+//   return input.reduce((acc, val, i) => {
+//     return acc += 1;
+//   });
+  return input.reduce(accumulator => accumulator + 1, 0);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -66,6 +70,10 @@ const characters = [
 
 const countNumberOfChildren = (input) => {
   // Solution code here...
+  return input.reduce((acc, val) => {
+    if (val.children) acc += val.children.length;
+    return acc;
+  }, 0);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -110,12 +118,15 @@ const snorlaxData = {
 
 const extractStat = (statName, input) => {
   // Solution code here...
+  return input.reduce((acc, val) => {
+    return (val.stat.name === statName) ? val : acc;
+  }, null);
 };
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
 //
-// Write a function that, given an array of numbers as input, uses ONE call to filter to
+// Write a function that, given an array of numbers as input, uses ONE call to reduce to
 // calculate the array's average value.
 // ------------------------------------------------------------------------------------------------
 
