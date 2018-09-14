@@ -20,3 +20,18 @@ class Solution:
         if len(s) > 0:
             return False
         return True
+
+
+# faster solution
+class Solution:
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s) != len(t):
+            return False
+        s = list(s)
+        t = list(t)
+        return sorted(s) == sorted(t)
