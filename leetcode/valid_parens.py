@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/valid-parentheses/
+# https://leetcode.com/articles/valid-parentheses/
 
 
 class Solution:
@@ -42,6 +43,7 @@ class Solution:
 
 # test cases:  '[', '}' and examples
 
+
 # another solution (with help from dicussion); has longer runtime but less lines of code
 class Solution:
     def isValid(self, s):
@@ -57,3 +59,29 @@ class Solution:
             if s == "":
                 return True
         return False
+
+
+# hash solution from newly written solution article
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        parens = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        }
+        stack = []
+        
+        for char in s:
+            if char in parens and stack:
+                if stack[-1] == parens[char]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(char)
+        
+        return not stack
