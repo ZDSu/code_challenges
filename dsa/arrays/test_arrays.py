@@ -25,6 +25,13 @@ def test_missing_element():
     assert finder([1,2,3,4,5,6,7], [3,7,2,1,4,6]) == 5
     assert finder([5,5,7,7], [5,7,7]) == 5
     assert finder([9,8,7,6,5,4,3,2,1],[9,8,7,5,4,3,2,1]) == 6
+    # additional tests from code wars
+    assert finder([1, 2, 3], [1, 3]) == 2
+    assert finder([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]) == 8
+    assert finder([7], []) == 7
+    assert finder([4, 3, 3, 61, 8, 8], [8, 61, 8, 3, 4]) == 3
+    assert finder([0, 0, 0, 0, 0], [0, 0, 0, 0]) == 0
+
 
 
 def test_largest_sum():
