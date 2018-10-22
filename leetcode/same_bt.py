@@ -50,6 +50,8 @@ class Solution(object):
 # test cases: 
 # [] [] 
 # [1,2] [1, null, 2]
+# [1] []
+# [2,null,4] [2,3,4]
 
 # How to think about this for a 1-line solution:
 # The example submission for the 100% C solution is about 30 lines. Yikes. Think more, code less. Only one line is needed.
@@ -80,3 +82,40 @@ def isSameTree(self, p, q):
 	    return False
 
     return True
+    
+
+
+class Solution:
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        if not p or not q:
+            if not p and not q:
+                return True
+            return False
+
+        qp = [p]
+        qq = [q]
+        
+        while qp:
+            currp = qp.pop(0)
+            currq = qq.pop(0)
+
+            if currp.val != currq.val:
+                return False
+
+            if currp.left and currq.left:
+                qp.append(currp.left)
+                qq.append(currq.left)
+            elif (currp.left and not currq.left) or (currq.left and not currp.left):
+                return False
+            if currp.right and currq.right:
+                qp.append(currp.right)
+                qq.append(currq.right)
+            elif (currp.right and not currq.right) or (currq.right and not currp.right):
+                return False
+        
+        return True
