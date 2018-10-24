@@ -33,3 +33,23 @@ class Solution:
 # [1, 2, 2, 2]
 # []
 # [0,0,1,1,1,2,2,3,3,4]
+
+
+class Solution:
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return 0
+        if len(nums) == 1:
+            return 1
+        i = j = 0
+        while j < len(nums):
+            if nums[i] != nums[j]:
+                i += 1
+                nums[i] = nums[j]
+            j += 1
+
+        return i + 1
