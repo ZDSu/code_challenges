@@ -1,3 +1,11 @@
+def fact(n):
+    """
+    Returns factorial of n (n!).
+    Note use of recursion
+    """
+    pass
+
+
 def rec_sum(n):
     """
     Problem 1

@@ -1,6 +1,11 @@
 from homework import *
 
 
+def test_fac():
+    assert fact(5) == 120
+    assert fact(4) == 24
+
+
 def test_rec_sum():
     assert rec_sum(4) == 10
 
