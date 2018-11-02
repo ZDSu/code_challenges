@@ -37,3 +37,9 @@ Questions from second round
 
 8)Given an array of 1 to n-1 with one dup, find the dup  
 (ex: `arr = [9, 8, 2, 6, 1, 8, 5, 3, 4, 7]`, `n = len(arr)` )
+
+9)Search for an element in an array where the differnce between all adjacent ellements is 1  
+arr = [8, 7, 6, 7, 6, 5, 4, 3, 2, 3, 4, 3]  
+n = len(arr)  
+target = 3  
+So, given an array where the difference between adjacent elements is 1, find the index for the first occurrence of the target element (ex: [8,7,6,7,6,5,4,3,4,3,2], target = 3)
