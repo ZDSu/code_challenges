@@ -43,3 +43,6 @@ arr = [8, 7, 6, 7, 6, 5, 4, 3, 2, 3, 4, 3]
 n = len(arr)  
 target = 3  
 So, given an array where the difference between adjacent elements is 1, find the index for the first occurrence of the target element (ex: [8,7,6,7,6,5,4,3,4,3,2], target = 3)
+
+10)Given an array of numbers, split the array into two where one array contains the sum of n-1 numbers and the other array with all the n-1 elements.  
+(ex: `arr = [1,2,3,5,28]` and `n = len(arr)` returns `[1, 2, 3]` and `[6]`
