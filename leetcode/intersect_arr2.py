@@ -64,3 +64,30 @@ class Solution:
         return inter
 
 # test case:  [4,9,5], [9,4,9,8,4]  result: [4,9]
+
+
+# 68 ms, 28.42%
+class Solution:
+    def intersect(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        result = []
+        numbers = {}
+        
+        for each in nums1:
+            if each in numbers:
+                numbers[each] += 1
+            else:
+                numbers[each] = 1
+        
+        for each in nums2:
+            if each in numbers:
+                result.append(each)
+                if numbers[each] == 1:
+                    del numbers[each]
+                else:
+                    numbers[each] -= 1
+        return result
