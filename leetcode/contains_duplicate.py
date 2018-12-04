@@ -24,3 +24,13 @@ class Solution(object):
 #         :rtype: bool
 #         """
 #         return len(set(nums)) < len(nums)
+
+
+# another one-liner
+class Solution:
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        return not len(nums) == len(set(nums))
