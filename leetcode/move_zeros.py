@@ -90,3 +90,24 @@ class Solution:
             if nums[i] != 0:
                 nums[i], nums[j] = nums[j], nums[i]
                 j += 1
+
+
+# another solution, similar to the best leetcode solution
+# (submitted twice in a row, returned 48 msec then 80 msec.. wth!)
+class Solution:
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        if not nums:
+            return []
+        i = j = 0
+        
+        while i < len(nums):
+            if nums[i] != 0:
+                nums[i], nums[j] = nums[j], nums[i]
+                i += 1
+                j += 1
+            else:
+                i += 1
