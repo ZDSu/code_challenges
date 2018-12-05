@@ -16,3 +16,4 @@ class Solution:
                 seen[num] = 1
         return list(seen.keys())[0]
         # return seen.popitem()[0]   # from solution, but runtime is a lot worse for some weird reason
+        # did again and now popitem() is the faster solution
