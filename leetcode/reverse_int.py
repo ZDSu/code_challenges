@@ -57,3 +57,22 @@ class Solution:
         if x > 2**31 - 1 or x < -2**31:
             return 0
         return x
+
+
+class Solution:
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        res = ''
+        x = str(x)
+        if x[0] == '-':
+            res += '-'
+        for i in range(len(x)-1, -1, -1):
+            if x[i] == '-':
+                continue
+            res += x[i]
+        if int(res) > 2**31 - 1 or int(res) < -2**31:
+            return 0
+        return int(res)
