@@ -75,3 +75,31 @@ class Solution:
         #     else:
         #         sum += dic[s[i]] - 2 * dic[s[i-1]]
         # return sum
+
+
+class Solution:
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if not s:
+            return 0
+
+        romans = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+        num = 0
+
+        for i in range(len(s) - 1):
+            if romans[s[i]] < romans[s[i + 1]]:
+                num -= romans[s[i]]
+            else:
+                num += romans[s[i]]
+        return num + romans[s[-1]]
