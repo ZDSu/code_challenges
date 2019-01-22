@@ -33,6 +33,7 @@ class Solution:
 # [1, 2, 2, 2]
 # []
 # [0,0,1,1,1,2,2,3,3,4]
+# [1]
 
 
 class Solution:
@@ -72,3 +73,20 @@ class Solution:
                 single += 1
                 nums[single] = nums[i]
         return single + 1
+
+
+class Solution:
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return
+
+        j = 0
+        for i in range(1, len(nums)):
+            if nums[j] != nums[i]:
+                nums[j + 1], nums[i] = nums[i], nums[j + 1]
+                j += 1 
+        return j + 1
