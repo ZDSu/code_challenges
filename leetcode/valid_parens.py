@@ -85,3 +85,78 @@ class Solution:
                 stack.append(char)
         
         return not stack
+
+
+# 100%, 32 ms
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if not s:
+            return True
+        
+        if len(s) % 2 == 1:
+            return False
+        
+        left = '{[('
+        temp = ''
+        
+        for char in s:
+            if char in left:
+                temp += char
+            elif char == '}':
+                if not temp or temp[-1] != '{':
+                    return False
+                if temp[-1] == '{':
+                    temp = temp[:-1]
+            elif char == ']':
+                if not temp or temp[-1] != '[':
+                    return False
+                if temp[-1] == '[':
+                    temp = temp[:-1]
+            elif char == ')':
+                if not temp or temp[-1] != '(':
+                    return False
+                if temp[-1] == '(':
+                    temp = temp[:-1]
+        if temp:
+            return False
+        return True
+
+
+#  97%, 36 ms [just took out unnecessary if conditional from above code so not sure why it takes longer]
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if not s:
+            return True
+
+        if len(s) % 2 == 1:
+            return False
+
+        left = '{[('
+        temp = ''
+
+        for char in s:
+            if char in left:
+                temp += char
+            elif char == '}':
+                if not temp or temp[-1] != '{':
+                    return False
+                temp = temp[:-1]
+            elif char == ']':
+                if not temp or temp[-1] != '[':
+                    return False
+                temp = temp[:-1]
+            elif char == ')':
+                if not temp or temp[-1] != '(':
+                    return False
+                temp = temp[:-1]
+        if temp:
+            return False
+        return True
