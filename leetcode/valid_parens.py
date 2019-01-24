@@ -61,7 +61,7 @@ class Solution:
         return False
 
 
-# hash solution from newly written solution article
+# hash solution from newly written solution article; also comes out 32 ms, 100%, just like solution below
 class Solution:
     def isValid(self, s):
         """
