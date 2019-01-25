@@ -15,3 +15,40 @@ class Solution:
         for i in reversed(pops):
             nums.pop(i)
         return len(nums)
+
+
+class Solution:
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        if not nums:
+            return
+
+        count = 0
+        for num in nums:
+            if num == val:
+                count += 1
+        for _ in range(count):
+            nums.remove(val)
+
+
+# from solution
+class Solution:
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        if not nums:
+            return
+
+        i = 0
+        for j in range(len(nums)):
+            if nums[j] != val:
+                nums[i] = nums[j]
+                i += 1
+        return i
