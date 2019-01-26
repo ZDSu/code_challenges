@@ -150,3 +150,33 @@ class Solution:
             return False
 
         return True
+
+
+# 32 ms, 100%
+class Solution:
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        if p and q:
+            return p.val == q.val and self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+        return p == q
+
+
+# 40 ms, 50%
+class Solution:
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
+        if p.val != q.val:
+            return False
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
