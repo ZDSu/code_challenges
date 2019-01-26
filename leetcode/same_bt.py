@@ -7,13 +7,7 @@
 #         self.left = None
 #         self.right = None
 
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
+# 36ms, 89%
 class Solution(object):
     def isSameTree(self, p, q):
         """
@@ -118,4 +112,41 @@ class Solution:
             elif (currp.right and not currq.right) or (currq.right and not currp.right):
                 return False
         
+        return True
+
+
+# 36 ms, 89%
+class Solution:
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
+
+        queueP = [p]
+        queueQ = [q]
+
+        while queueP and queueQ:
+            currP = queueP.pop(0)
+            currQ = queueQ.pop(0)
+            if currP.val != currQ.val or \
+                (currP.left and not currQ.left) or \
+                (currQ.left and not currP.left) or \
+                (currP.right and not currQ.right) or \
+                (currQ.right and not currP.right):
+                return False
+            if currP.left and currQ.left:
+                queueP.append(currP.left)
+                queueQ.append(currQ.left)
+            if currP.right and currQ.right:
+                queueP.append(currP.right)
+                queueQ.append(currQ.right)
+        if currP.left or currP.right or currQ.left or currQ.right:
+            return False
+
         return True
