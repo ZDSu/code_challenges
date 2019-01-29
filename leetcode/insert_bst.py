@@ -36,3 +36,28 @@ class Solution:
                     else:
                         current.left = TreeNode(value)
                     return root
+
+
+# 120 ms, 92%
+class Solution:
+    def insertIntoBST(self, root, value):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        curr = root
+        while curr:
+            if curr.val < value:
+                if curr.right:
+                    curr = curr.right
+                else:
+                    curr.right = TreeNode(value)
+                    break
+            else:
+                if curr.left:
+                    curr = curr.left
+                else:
+                    curr.left = TreeNode(value)
+                    break
+        return root
