@@ -31,7 +31,7 @@ class Solution:
         return []
 
 
-# slightly better solution
+# slightly better solution (less code but not more performant)
 class Solution:
     def searchBST(self, root, val):
         """
@@ -45,3 +45,31 @@ class Solution:
             else:
                 root = root.right
         return root
+
+
+class Solution:
+    def searchBST(self, root, val):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        if not root or not val:
+            return
+        
+        queue = [root]
+        
+        while queue:
+            curr = queue.pop(0)
+            if curr.val == val:
+                return curr
+            if curr.left:
+                queue.append(curr.left)
+            if curr.right:
+                queue.append(curr.right)
+        return
+
+
+# test cases:
+# [4,2,7,1,3], 5   returns []
+# [18,2,22,null,null,null,63,null,84,null,null], 63   returns [63,null,84]
