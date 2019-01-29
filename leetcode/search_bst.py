@@ -73,3 +73,39 @@ class Solution:
 # test cases:
 # [4,2,7,1,3], 5   returns []
 # [18,2,22,null,null,null,63,null,84,null,null], 63   returns [63,null,84]
+
+
+#  according to solutions, this is fastest, but runs slower than my other solutions
+class Solution:
+    def searchBST(self, root, val):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        while root:
+            if root.val == val:
+                return root
+            elif root.val > val:
+                root = root.left
+            elif root.val < val:
+                root = root.right
+        return None
+
+
+# and then this one gets 100% but is basically the same as the solution above
+class Solution:
+    def searchBST(self, root, val):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        while root:
+            if root.val == val:
+                return root
+            if root.val < val:
+                root = root.right
+            else:
+                root = root.left
+        return
