@@ -25,3 +25,28 @@ class Solution(object):
                 tstring = tstring[:-1]
         
         return sstring == tstring
+
+
+class Solution:
+    def backspaceCompare(self, S, T):
+        """
+        :type S: str
+        :type T: str
+        :rtype: bool
+        """
+        if not S or not T:
+            return False
+        sstr = tstr = ''
+        for char in S:
+            if char == '#':
+                if len(sstr) > 0:
+                    sstr = sstr[:-1]
+            else:
+                sstr += char
+        for char in T:
+            if char == '#':
+                if len(tstr) > 0:
+                    tstr = tstr[:-1]
+            else:
+                tstr += char
+        return sstr == tstr
