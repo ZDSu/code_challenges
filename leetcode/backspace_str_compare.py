@@ -36,17 +36,16 @@ class Solution:
         """
         if not S or not T:
             return False
+
         sstr = tstr = ''
         for char in S:
             if char == '#':
-                if len(sstr) > 0:
-                    sstr = sstr[:-1]
+                sstr = sstr[:-1]
             else:
                 sstr += char
         for char in T:
             if char == '#':
-                if len(tstr) > 0:
-                    tstr = tstr[:-1]
+                tstr = tstr[:-1]
             else:
                 tstr += char
         return sstr == tstr
