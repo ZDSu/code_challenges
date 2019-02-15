@@ -27,3 +27,19 @@ class BinaryTree:
             root = BinaryTree(node)
             root.rightChild = self.rightChild
             self.rightChild = root
+
+    def getLefttChild(self):
+        """Return left child of tree."""
+        return self.lefttChild
+
+    def getRightChild(self):
+        """Return right child of tree."""
+        return self.rightChild
+
+    def setRootValue(self, rootObj):
+        """Set root value of tree."""
+        self.key = rootObj
+
+    def getRootValue(self):
+        """Return root value of tree."""
+        return self.key
