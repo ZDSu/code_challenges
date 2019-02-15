@@ -40,3 +40,23 @@ def insertRight(root, newBranch):
         root.insert(2, [newBranch, [], []])
 
     return root
+
+
+def getRootVal(root):
+    """Return root value."""
+    return root[0]
+
+
+def setRootVal(root, value):
+    """Set a new root value."""
+    root[0] = value
+
+
+def getLeftChild(root):
+    """Return left child."""
+    return root[1]
+
+
+def getRightChild(root):
+    """Return right child."""
+    return root[2]
