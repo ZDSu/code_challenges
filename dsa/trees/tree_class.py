@@ -43,3 +43,11 @@ class BinaryTree:
     def getRootValue(self):
         """Return root value of tree."""
         return self.key
+
+
+r = BinaryTree('a')
+r.getRootValue()  # 'a'
+r.getLefttChild()  # None
+r.insertLeft('b')
+r.getLefttChild()  # Node representation
+r.getLefttChild().getRootValue()  # 'b'
