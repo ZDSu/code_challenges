@@ -30,7 +30,7 @@ class BinaryTree:
 
     def getLefttChild(self):
         """Return left child of tree."""
-        return self.lefttChild
+        return self.leftChild
 
     def getRightChild(self):
         """Return right child of tree."""
