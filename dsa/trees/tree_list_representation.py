@@ -60,3 +60,17 @@ def getLeftChild(root):
 def getRightChild(root):
     """Return right child."""
     return root[2]
+
+# build out a tree
+r = BinaryTree(3)
+insertLeft(r, 4)
+insertLeft(r, 5)
+insertRight(r, 6)
+insertRight(r, 7)
+print(r)  # [3, [5, [4, [], []], []], [7, [], [6, [], []]]]
+
+l = getLeftChild(r)
+print(l)  # [5, [4, [], []]
+
+setRootVal(l, 9)
+print(r)  # [3, [9, [4, [], []], []], [7, [], [6, [], []]]]
