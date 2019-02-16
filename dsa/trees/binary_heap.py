@@ -1,4 +1,4 @@
-"""Binary Heap Implementation."""
+"""Binary Heap Implementation (Min Heap)."""
 
 
 class BinaryHeap:
@@ -44,3 +44,12 @@ class BinaryHeap:
             if self.heapList[index * 2] < self.heapList[index * 2 + 1]:
                 return index * 2
             return index * 2 + 1
+
+    def deleteMin(self):
+        """Remove minimum child from binary heap."""
+        min_value = self.heapList[1]
+        self.heapList[1] = self.heapList[self.size]
+        self.heapList.pop()
+        self.size -= 1
+        self.percDown(1)
+        return min_value
