@@ -63,3 +63,11 @@ class BinaryHeap:
         while index > 0:
             self._percDown(index)
             index -= 1
+
+    def isEmpty(self):
+        """Return true is heap is empty, false otherwise."""
+        return self.size == 0
+
+    def findMin(self):
+        """Returns the item with the minimum key value, leaving item in the heap."""
+        return self.heapList[1]
