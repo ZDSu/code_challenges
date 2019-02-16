@@ -14,11 +14,11 @@ class Node:
 
     def hasLeftChild(self):
         """Returns True if node has a left child, else False."""
-        return self.leftChild
+        return self.leftChild is not None
 
-    def hasRightChild(right):
+    def hasRightChild(self):
         """Returns True if node has a right child, else False."""
-        return self.rightChild
+        return self.rightChild is not None
 
     def isLeftChild(self):
         """Returns True if node is a left child, else False."""
