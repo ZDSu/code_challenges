@@ -28,7 +28,7 @@ class BinaryTree:
             root.rightChild = self.rightChild
             self.rightChild = root
 
-    def getLefttChild(self):
+    def getLeftChild(self):
         """Return left child of tree."""
         return self.leftChild
 
@@ -47,7 +47,7 @@ class BinaryTree:
 
 r = BinaryTree('a')
 r.getRootValue()  # 'a'
-r.getLefttChild()  # None
+r.getLeftChild()  # None
 r.insertLeft('b')
-r.getLefttChild()  # Node representation
-r.getLefttChild().getRootValue()  # 'b'
+r.getLeftChild()  # Node representation
+r.getLeftChild().getRootValue()  # 'b'
