@@ -28,7 +28,7 @@ class BinaryHeap:
     def _percDown(self, index):
         """Percolate down."""
         while index * 2 <= self.size:
-            mc_index = self.minChild(index)
+            mc_index = self._minChild(index)
             if self.heapList[index] > self.heapList[mc_index]:
                 # temp = self.heapList[index]
                 # self.heapList[index] = self.heapList[mc_index]
@@ -36,7 +36,7 @@ class BinaryHeap:
                 self.heapList[index], self.heapList[mc_index] = self.heapList[mc_index], self.heapList[index]
             index = mc_index
 
-    def minChild(self, index):
+    def _minChild(self, index):
         """Return minimum child index."""
         if index * 2 + 1 > self.size:
             return index * 2
@@ -53,3 +53,13 @@ class BinaryHeap:
         self.size -= 1
         self._percDown(1)
         return min_value
+
+    def buildHeap(self, arr):
+        """Build a heap given a list of values."""
+        self.size = len(arr)
+        self.heapList = [0] + arr[:]
+
+        index = len(arr) // 2
+        while index > 0:
+            self._percDown(index)
+            index -= 1
