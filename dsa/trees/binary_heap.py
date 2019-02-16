@@ -5,7 +5,7 @@ class BinaryHeap:
     """Binary Heap class."""
 
     def __init__(self):
-        """Constructor."""
+        """Create a new, empty binary heap."""
         self.heapList = [0]
         self.size = 0
 
@@ -13,14 +13,11 @@ class BinaryHeap:
         """Percolate up."""
         while index // 2 > 0:
             if self.heapList[index] < self.heapList[index // 2]:
-                # temp = self.heapList[index // 2]
-                # self.heapList[i // 2] = self.heapList[index]
-                # self.heapList[i] = temp
                 self.heapList[index // 2], self.heapList[index] = self.heapList[index], self.heapList[index // 2]
             index = index // 2
 
     def insert(self, key):
-        """Insert new node in heap."""
+        """Insert new key in heap."""
         self.heapList.append(key)
         self.size += 1
         self._percUp(self.size)
@@ -30,9 +27,6 @@ class BinaryHeap:
         while index * 2 <= self.size:
             mc_index = self._minChild(index)
             if self.heapList[index] > self.heapList[mc_index]:
-                # temp = self.heapList[index]
-                # self.heapList[index] = self.heapList[mc_index]
-                # self.heapList[mc_index] = temp
                 self.heapList[index], self.heapList[mc_index] = self.heapList[mc_index], self.heapList[index]
             index = mc_index
 
@@ -55,7 +49,7 @@ class BinaryHeap:
         return min_value
 
     def buildHeap(self, arr):
-        """Build a heap given a list of values."""
+        """Build a heap given a list of keys."""
         self.size = len(arr)
         self.heapList = [0] + arr[:]
 
@@ -65,9 +59,9 @@ class BinaryHeap:
             index -= 1
 
     def isEmpty(self):
-        """Return true is heap is empty, false otherwise."""
+        """Return true if heap is empty, false otherwise."""
         return self.size == 0
 
     def findMin(self):
-        """Returns the item with the minimum key value, leaving item in the heap."""
+        """Return the item with the minimum key value, leaving item in the heap."""
         return self.heapList[1]
