@@ -25,3 +25,22 @@ class BinaryHeap:
         self.size += 1
         self.percUp(self.size)
 
+    def percDown(self, index):
+        """Percolate down."""
+        while index * 2 <= self.size:
+            mc_index = self.minChild(index)
+            if self.heapList[index] > self.heapList[mc_index]:
+                # temp = self.heapList[index]
+                # self.heapList[index] = self.heapList[mc_index]
+                # self.heapList[mc_index] = temp
+                self.heapList[index], self.heapList[mc_index] = self.heapList[mc_index], self.heapList[index]
+            index = mc_index
+
+    def minChild(self, index):
+        """Return minimum child index."""
+        if index * 2 + 1 > self.size:
+            return index * 2
+        else:
+            if self.heapList[index * 2] < self.heapList[index * 2 + 1]:
+                return index * 2
+            return index * 2 + 1
