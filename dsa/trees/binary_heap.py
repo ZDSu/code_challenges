@@ -9,7 +9,7 @@ class BinaryHeap:
         self.heapList = [0]
         self.size = 0
 
-    def percUp(self, index):
+    def _percUp(self, index):
         """Percolate up."""
         while index // 2 > 0:
             if self.heapList[index] < self.heapList[index // 2]:
@@ -23,9 +23,9 @@ class BinaryHeap:
         """Insert new node in heap."""
         self.heapList.append(key)
         self.size += 1
-        self.percUp(self.size)
+        self._percUp(self.size)
 
-    def percDown(self, index):
+    def _percDown(self, index):
         """Percolate down."""
         while index * 2 <= self.size:
             mc_index = self.minChild(index)
@@ -51,5 +51,5 @@ class BinaryHeap:
         self.heapList[1] = self.heapList[self.size]
         self.heapList.pop()
         self.size -= 1
-        self.percDown(1)
+        self._percDown(1)
         return min_value
