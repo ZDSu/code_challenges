@@ -12,6 +12,9 @@ class BinarySearchTree:
         self.root = None
         self.size = 0
 
+    def __setitem__(self, key, value):
+        self.insert(key, value)
+
     def length(self):
         """Return size of tree."""
         return self.size
@@ -44,3 +47,17 @@ class BinarySearchTree:
                 self._insert(key, value, currentNode.rightChild)
             else:
                 currentNode.rightChild = Node(key, value, parent=currentNode)
+
+mytree = BinarySearchTree()
+mytree.insert("red", "red")
+mytree.insert("blue", "blue")
+mytree.insert("yellow", "yellow")
+mytree.insert("at", "at")
+print(mytree.root.leftChild.payload)
+print(mytree.root.rightChild.payload)
+print(mytree.root.rightChild.leftChild)
+print(mytree.root.rightChild.rightChild)
+print(mytree.root.leftChild.rightChild)
+print(mytree.root.leftChild.leftChild.payload)
+# print(mytree[6])
+# print(mytree[2])
