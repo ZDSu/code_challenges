@@ -24,6 +24,12 @@ class BinarySearchTree:
         """Allows use of bracket notation to delete node (i.e., del self[key])."""
         self.delete(key)
 
+    def __contains__(self, key):
+        """Used to see if a key is in the tree."""
+        if self.get(key, self.root):
+            return True
+        return False
+
     def __len__(self):
         """Allows use of the len() built-in method."""
         return self.size
