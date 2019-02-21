@@ -33,6 +33,35 @@ class Solution(object):
         return res
 
 
+# (recursive) runtime 20 ms, 100%; memory 10.8 MB, 52%
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        res = []
+        if not root:
+            return res
+
+        def travel(node):
+            if not node:
+                return
+            res.append(node.val)
+            travel(node.left)
+            travel(node.right)
+
+        travel(root)
+        return res
+
+
 # (iterative) runtime 32ms, 14%; memory 10.7 MB, 84%
 # Definition for a binary tree node.
 # class TreeNode(object):
