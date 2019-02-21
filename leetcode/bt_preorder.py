@@ -2,7 +2,7 @@
 # https://leetcode.com/problems/binary-tree-preorder-traversal/
 
 
-# runtime 20 ms, 100%; memory 10.9 MB, 12%
+# (recursive) runtime 20 ms, 100%; memory 10.9 MB, 12%
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -30,4 +30,35 @@ class Solution(object):
                 travel(node.right)
 
         travel(root)
+        return res
+
+
+# (iterative) runtime 32ms, 14%; memory 10.7 MB, 84%
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        res = []
+        stack = [root]
+
+        if not root:
+            return res
+
+        while stack:
+            curr = stack.pop()
+            res.append(curr.val)
+            if curr.right:
+                stack.append(curr.right)
+            if curr.left:
+                stack.append(curr.left)
+
         return res
