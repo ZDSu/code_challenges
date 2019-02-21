@@ -1,6 +1,8 @@
-https://leetcode.com/problems/binary-tree-level-order-traversal/
+# https://leetcode.com/problems/binary-tree-level-order-traversal/
+# https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/931/
 
 
+# runtime 28 ms, 82%; memory 11.5 MB, 46%
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -14,10 +16,10 @@ class Solution:
         :type root: TreeNode
         :rtype: List[List[int]]
         """
-        res = []
         if not root:
-            return res
+            return []
 
+        res = []
         queue = [root]
 
         while queue:
