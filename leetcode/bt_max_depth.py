@@ -1,7 +1,16 @@
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+# https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-problems-recursively/535/
 
 
-class Solution:
+# runtime 52 ms, 16%; memory 13.7 MB, 87%
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
     def maxDepth(self, root):
         """
         :type root: TreeNode
@@ -9,19 +18,20 @@ class Solution:
         """
         if not root:
             return 0
-        
+
+        depth = 0
         queue = [root]
-        level = 0
-        
+
         while queue:
-            curr = queue.pop(0)
-            if not queue:
-                level += 1
-            if curr.left:
-                queue.append(curr.left)
-            if curr.right:
-                queue.append(curr.right)
-        return level
+            for _ in range(len(queue)):
+                curr = queue.pop(0)
+                if curr.left:
+                    queue.append(curr.left)
+                if curr.right:
+                    queue.append(curr.right)
+            depth += 1
+
+        return depth
 
 
 # test cases:
