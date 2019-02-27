@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/univalued-binary-tree/
 
 
+# runtime: 16 ms, 100%; memory 10.8 MB, 75%
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -15,14 +16,14 @@ class Solution(object):
         :rtype: bool
         """
         val = root.val
+        queue = [root]
 
-        def _traverse(node):
-            if node:
-                if node.val != val:
-                    return False
-                if node.left:
-                    _traverse(node.left)
-                if node.right:
-                    _traverse(node.right)
-        _traverse(root)
+        while queue:
+            curr = queue.pop(0)
+            if curr.val != val:
+                return False
+            if curr.left:
+                queue.append(curr.left)
+            if curr.right:
+                queue.append(curr.right)
         return True
