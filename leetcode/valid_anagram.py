@@ -38,7 +38,7 @@ class Solution:
         return sorted(s) == sorted(t)
 
 
-# runtime: 60 ms, 65%; memory: 13.2 MB, 34%
+# runtime: 56 ms, 72%; memory: 13.2 MB, 35%
 class Solution:
     def isAnagram(self, s, t):
         """
@@ -48,23 +48,22 @@ class Solution:
         """
         if s == t:
             return True
+        if len(s) != len(t):
+            return False
 
         letters = {}
         for char in s:
-            try:
+            if char in letters:
                 letters[char] += 1
-            except KeyError:
+            else:
                 letters[char] = 1
 
         for char in t:
-            try:
-                letters[char] -= 1
-                if letters[char] < 0:
-                    return False
-                if letters[char] == 0:
-                    del letters[char]
-            except KeyError:
+            if char not in letters:
                 return False
+            letters[char] -= 1
+            if letters[char] == 0:
+                del letters[char]
 
         if letters:
             return False
