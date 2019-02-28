@@ -1,5 +1,6 @@
 """
 Given 2 strings, check to see if they are anagrams. An anagram is when 2 strings can be written using the exact same letters. Example: "dog" is an anagram of "god."  Note: Ignore spaces and capitalization.
+https://leetcode.com/problems/valid-anagram/
 """
 
 def anagram(s1, s2):
