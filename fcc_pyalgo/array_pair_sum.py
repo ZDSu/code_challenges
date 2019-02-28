@@ -9,14 +9,33 @@ def pair_sum(arr, k):
         return
 
     seen = {}
-    res = set()
+    res = []
     for num in arr:
         target = k - num
         if target in seen:
-            res.add(sorted(target, num))
+            res.append((sorted([target, num])))
             seen[target] -= 1
             if seen[target] < 1:
                 del seen[target]
         else:
             seen[num] = 0
-    return res
+    return print(res)
+
+
+# youtube solution
+def pair_sum(arr, k):
+    if len(arr) < 2:
+        return print("Too small")
+
+    seen = set()
+    output = set()
+    for num in arr:
+        target = k - num
+        if target not in seen:
+            seen.add(num)
+        else:
+            output.add((min(num, target), max(num, target)))
+
+    print('\n'.join(map(str, list(output))))
+
+pair_sum([1, 3, 2, 2], 4)
