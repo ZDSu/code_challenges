@@ -22,7 +22,14 @@ import sys
 
 # Complete the oddNumbers function below.
 def oddNumbers(l, r):
-    
+    res = []
+    if l % 2 == 0:
+        for num in range(l + 1, r + 1, 2):
+            res.append(num)
+    else:
+        for num in range(l, r + 1, 2):
+            res.append(num)
+    return res
 
 
 if __name__ == '__main__':
