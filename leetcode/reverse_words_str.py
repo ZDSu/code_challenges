@@ -42,6 +42,19 @@ class Solution:
         return res.strip()
 
 
+# runtime 36 ms, 100%; memory 13.3 MB, 100%
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        if not s:
+            return ''
+
+        res = ''
+        for word in s.split()[::-1]:
+            if word:
+                res += f'{word} '
+        return res.strip()
+
+
 # runtime 36 ms, 100%; memory 13.6 MB, 100%
 class Solution:
     def reverseWords(self, s: str) -> str:
