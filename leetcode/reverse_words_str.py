@@ -40,3 +40,9 @@ class Solution:
             if word:
                 res += f'{word} '
         return res.strip()
+
+
+# runtime 36 ms, 100%; memory 13.6 MB, 100%
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(reversed(s.split()))
