@@ -27,3 +27,16 @@ class Solution:
             if word:
                 res = f'{word.strip()} {res}'
         return res[:-1]
+
+
+# runtime 36 ms, 100%; memory 13.4 MB, 100%
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        if not s:
+            return ''
+
+        res = ''
+        for word in reversed(s.split()):
+            if word:
+                res += f'{word} '
+        return res.strip()
