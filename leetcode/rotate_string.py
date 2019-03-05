@@ -2,15 +2,18 @@
 # https://leetcode.com/articles/rotate-string/
 
 
+# runtime: 52 ms, 22%; memory: 13.2 MB, 6%
 class Solution:
     def rotateString(self, A: str, B: str) -> bool:
         if len(A) != len(B):
             return False
+        if not A and not B:
+            return True
 
         for i in range(len(B)):
             if B[i] == A[0]:
-                B = f'{B[i:]}{B[:i]}'
-                if A == B:
+                temp = f'{B[i:]}{B[:i]}'
+                if A == temp:
                     return True
         return False
 
