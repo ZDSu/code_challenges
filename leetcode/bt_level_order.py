@@ -3,6 +3,8 @@
 
 
 # runtime 28 ms, 82%; memory 11.5 MB, 46%
+# done again and now runtime 44 ms, 52%; memory 13.2 MB, 12.5%
+# and 13.3 MB memory when line 35 in code below is after line 30
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
