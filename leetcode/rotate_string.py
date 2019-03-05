@@ -36,6 +36,17 @@ class Solution:
     def rotateString(self, A: str, B: str) -> bool:
         return len(A) == len(B) and B in A + A
 
+
+# runtime: 36 ms, 63%; memory 13.1 MB, 6%
+class Solution:
+    def rotateString(self, A: str, B: str) -> bool:
+        if len(A) != len(B):
+            return False
+        if A in B * 2:
+            return True
+        return False
+
+
 # test cases: 
 # "abcde", "cdeab"  returns True
 # "", "a"  returns False
