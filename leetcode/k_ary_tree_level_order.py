@@ -95,3 +95,25 @@ class Solution:
             cur = tmp
 
         return res
+
+# from discussion
+# runtime 104 ms, 36%; memory 17.6 MB, 5.5%
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+        q, ret = [root], []
+        while any(q):
+            ret.append([node.val for node in q])
+            q = [child for node in q for child in node.children if child]
+        return ret
+
+# above without using any()
+# runtime 100 ms, 50%; 17.6 MB, 5.5%
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+        if not root:
+            return []
+        q, ret = [root], []
+        while q:
+            ret.append([node.val for node in q])
+            q = [child for node in q for child in node.children if child]
+        return ret
