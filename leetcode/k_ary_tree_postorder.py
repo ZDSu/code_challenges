@@ -25,3 +25,18 @@ class Solution:
 
         _traverse(root)
         return res
+
+
+# runtime 104 ms, 21%; memory 17.4 MB, 6%
+class Solution:
+    def postorder(self, root: 'Node') -> List[int]:
+        if not root:
+            return []
+
+        res = []
+        stack = [root]
+        while stack:
+            curr = stack.pop()
+            res.insert(0, curr.val)
+            stack += curr.children
+        return res
