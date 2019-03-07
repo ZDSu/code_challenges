@@ -87,10 +87,11 @@ class Solution:
             for i in range(len(ht[key])):
                 if 1 <= i <= len(ht[key]):
                     if ht[key][i][0] == ht[key][i - 1][0] and ht[key][i][1] == ht[key][i - 1][1]:
-                        if ht[key][i][2] < ht[key][i - 1][2]:
-                            temp.insert(-1,ht[key][i][2])
+                        # if ht[key][i][2] < ht[key][i - 1][2]:
+                        if ht[key][i][2] < temp[-1]:
+                            temp.insert(-1, ht[key][i][2])
                             continue
                 temp.append(ht[key][i][2])
             res.append(temp)
         return res
-# doesn't pass [0,2,1,3,null,5,22,9,4,12,25,null,null,13,14,8,6,null,null,null,null,null,27,24,26,null,17,7,null,28,null,null,null,null,null,19,null,11,10,null,null,null,23,16,15,20,18,null,null,null,null,null,21,null,null,29]   ... passing 20/30 tests
+# doesn't pass [0,2,1,3,null,5,22,9,4,12,25,null,null,13,14,8,6,null,null,null,null,null,27,24,26,null,17,7,null,28,null,null,null,null,null,19,null,11,10,null,null,null,23,16,15,20,18,null,null,null,null,null,21,null,null,29] because there are 3 nodes with the same x,y  [passing 20/30 tests]
