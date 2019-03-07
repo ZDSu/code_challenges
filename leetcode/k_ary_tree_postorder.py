@@ -40,3 +40,16 @@ class Solution:
             res.insert(0, curr.val)
             stack += curr.children
         return res
+
+
+# sample 84 ms submission. when i ran, i got:
+# runtime 100 ms, 39%; 17.6 MB, 6%
+class Solution:
+    def postorder(self, root: 'Node') -> List[int]:
+        ans, stack = [], [root]
+        while stack:
+            node = stack.pop()
+            if node:
+                ans.append(node.val)
+                stack += node.children
+        return ans[::-1]
