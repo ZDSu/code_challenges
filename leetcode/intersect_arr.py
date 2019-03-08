@@ -2,7 +2,7 @@
 
 
 # runtime 40 ms, 74%; memory 13.2 MB, 5%
-# without lines 12-13, runtime 44 ms, 52%; 13.2 MB, 5%
+# without lines 13-14, runtime 44 ms, 52%; 13.2 MB, 5%; but ran a second time and got same results of including those lines (runtime 40 ms, 74%; memory 13.2 MB, 5%)
 class Solution:
     def intersection(self, nums1, nums2):
         """
