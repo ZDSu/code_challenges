@@ -1,5 +1,5 @@
-### Python Algorithms from Interviews
-#### freeCodeCamp.org
+## Python Algorithms for Interviews
+#### freeCodeCamp
 
 Common algorithm concepts in Python and how to solve algorithm challenges you may encounter in an interview.
 
