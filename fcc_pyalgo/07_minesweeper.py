@@ -17,6 +17,8 @@ we should return a 3 x 4 array (-1) = bomb
 
 Comment: why doesn't he take in the rows and columns first and then the bombs since number of bombs can vary but there is also only one row and one column argument.
 
+Visualization: https://goo.gl/h4h4ax
+
 similar: https://leetcode.com/problems/minesweeper/
 """
 
