@@ -38,7 +38,7 @@ class Solution:
         """
         if not s:
             return -1
-        
+
         letters = {}
         for i in range(len(s)):
             if s[i] in letters:
@@ -48,4 +48,22 @@ class Solution:
         for i in range(len(s)):
             if letters[s[i]] == 1:
                 return i
+        return -1
+
+
+class Solution:
+    def firstUniqChar(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if not s:
+            return -1
+
+        chars = set(s)
+
+        for i in range(len(s)):
+            if s[i] in chars:
+                return i
+
         return -1
