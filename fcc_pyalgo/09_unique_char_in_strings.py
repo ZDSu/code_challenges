@@ -8,11 +8,12 @@ Remember, arrays are mutable but strings are immutable
 Similar: https://leetcode.com/problems/first-unique-character-in-a-string/
 """
 # my solution, without clarifications
+# edit solution to handle strings with spaces, which are ignored
 def unique(s):
     chars = set()
 
     for char in s:
-        if char in chars:
+        if char in chars and char != ' ':
             return False
         chars.add(char)
 
@@ -27,6 +28,17 @@ def unique(s):
     # use a set (an unordered collection of unique elements)
     return len(set(s)) == len(s)
 
+
+def unique(s):
+    s = s.replace(' ', '')
+    chars = set()
+
+    for letter in s:
+        if letter in chars:
+            return False
+        else:
+            chars.add(letter)
+    return True
 
 print(unique('a b cdef'))  # True
 print(unique('a b cdeaf'))  # False
