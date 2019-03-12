@@ -29,7 +29,8 @@ class Solution:
 # test case: ''   returns -1
 
 
-# solution method
+# solution method (but not using counter objects)
+# runtime 164 ms, 35%; memory 13.4 MB, 5%
 class Solution:
     def firstUniqChar(self, s):
         """
@@ -51,6 +52,7 @@ class Solution:
         return -1
 
 
+# runtime 164 ms, 35%; memory 13.4 MB, 5%
 class Solution:
     def firstUniqChar(self, s):
         """
@@ -60,10 +62,36 @@ class Solution:
         if not s:
             return -1
 
-        chars = set(s)
+        chars = {}
 
         for i in range(len(s)):
             if s[i] in chars:
+                chars[s[i]] += 1
+            else:
+                chars[s[i]] = 1
+
+        for i in range(len(s)):
+            if chars[s[i]] == 1:
+                return i
+
+        return -1
+
+
+# solution method
+# runtime 108 ms, 80%; memory 13.2 MB, 5%
+class Solution:
+    def firstUniqChar(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if not s:
+            return -1
+
+        chars = collections.Counter(s)
+
+        for i in range(len(s)):
+            if chars[s[i]] == 1:
                 return i
 
         return -1
