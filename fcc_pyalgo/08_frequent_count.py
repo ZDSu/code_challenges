@@ -19,3 +19,6 @@ def most_frequent(arr):
             max_item = ele
 
     return max_item
+
+print(most_frequent([1,3,3,3,2,1,1,1]))  # returns 1
+print(most_frequent([1,3,3,3,3,2,1,1,1]))  # returns 3 but should return 1 and 3; he doesn't take care of this edge case
