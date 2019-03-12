@@ -8,7 +8,7 @@ https://leetcode.com/problems/first-unique-character-in-a-string/ (same challeng
 """
 
 
-def nonrepeat(s):
+def first_nonrepeat(s):
     s = s.replace(' ', '').lower()
     chars = {}
 
@@ -20,8 +20,8 @@ def nonrepeat(s):
 
     for letter in s:
         if chars[letter] == 1:
-            return c
+            return letter
 
     return
 
-print(nonrepeat('I Apple Ape Peels'))  # returns i
+print(first_nonrepeat('I Apple Ape Peels'))  # returns i
