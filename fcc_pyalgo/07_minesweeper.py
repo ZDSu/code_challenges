@@ -15,8 +15,6 @@ translates to:
 we should return a 3 x 4 array (-1) = bomb
 (ends up deleting this stuff because he changed the original bomb location from [0,1] to [1,2])  [[-1, -1, 1, 0], [2, 2, 1, 0], the 2 bombs means 2 bombs in surrounding cells [1,0] knows [0,0] and [0,1] have ...?... 0,0,0,0]]
 
-Comment: why doesn't he take in the rows and columns first and then the bombs since number of bombs can vary but there is also only one row and one column argument.
-
 Visualization: https://goo.gl/h4h4ax
 
 similar: https://leetcode.com/problems/minesweeper/
