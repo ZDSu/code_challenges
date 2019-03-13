@@ -2,6 +2,7 @@
 # https://leetcode.com/articles/contains-duplicate/
 
 
+# runtime 48 ms, 66%; memory 18.5 MB, 26% (same results as the one-liner)
 class Solution(object):
     def containsDuplicate(self, nums):
         """
