@@ -4,7 +4,7 @@ Take a string and return character that never repeats (Note: the title says arra
 if multiple uniques then return only the FIRST unique
 Then will also solve to return EVERY element that is not repeating
 
-https://leetcode.com/problems/first-unique-character-in-a-string/ (same challenge as for #9)
+https://leetcode.com/problems/first-unique-character-in-a-string/
 """
 
 
