@@ -2,6 +2,7 @@
 # https://leetcode.com/articles/top-k-frequent-elements/
 
 
+# runtime 252 ms, 5%; memory 15.8 MB, 8%
 class Solution:
     def topKFrequent(self, nums, k):
         """
@@ -25,7 +26,7 @@ class Solution:
         return result
 
 
-# in progress, try to use new data structure
+# runtime 56 ms, 43%; memory 16 MB, 8%
 class Solution:
     def topKFrequent(self, nums, k):
         """
@@ -33,21 +34,13 @@ class Solution:
         :type k: int
         :rtype: List[int]
         """
-        if not nums or not k:
-            return
+        if not nums:
+            return []
 
-        count = {}
-        res = []
+        count = collections.Counter(nums)
+        res = collections.Counter(count).most_common(k)
 
-        for num in nums:
-            if num in count:
-                count[num] += 1
-            else:
-                count[num] = 1
+        for i in range(len(res)):
+            res[i] = res[i][0]
 
-#         for i in range(k):
-#             res.append(sorted(count.values()))
-
-        print(count.values(), sorted(count.values()))
-        print(count.keys(), sorted(count.keys()))
-        print(count.items(), sorted(count.items()))
+        return res
