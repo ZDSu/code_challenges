@@ -5,10 +5,10 @@ return True/False
 Uses python built-in structures
 Remember, arrays are mutable but strings are immutable
 
-Similar: https://leetcode.com/problems/first-unique-character-in-a-string/
+https://leetcode.com/problems/contains-duplicate/
 """
 # my solution, without clarifications
-# edit solution to handle strings with spaces, which are ignored
+# edited solution to handle strings with spaces, which are ignored
 def unique(s):
     chars = set()
 
