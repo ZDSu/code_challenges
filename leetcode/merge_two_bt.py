@@ -2,6 +2,8 @@
 # https://leetcode.com/articles/merge-two-binary-trees/
 
 
+# runtime 68 ms, 68%
+# runtime 88 ms, 74%; memory 13.4 MB, 30%
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -32,5 +34,5 @@ class Solution(object):
             if one.right and two.right:
                 queue.append((one.right, two.right))
             elif two.right:
-                one.right = two.right             
+                one.right = two.right
         return t1
