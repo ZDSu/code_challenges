@@ -20,3 +20,16 @@ Source: https://www.youtube.com/watch?v=p65AHm9MX80
 - (3:08:16) Frequent Count (#8)
 - (3:16:58) Unique Characters in Strings (#9)
 - (3:28:35) Non-Repeat Elements in Array (#10)
+
+
+#### Big O Notation
+| Big O | Name |
+|--|--|
+| 1 | constant |
+| log(n) | logarithmic |
+| n | linear |
+| n*log(n) | log linear |
+| n^2 | quadratic |
+| n^3 | cubic |
+| 2^n | exponential |
+| n! | factorial |
