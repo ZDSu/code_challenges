@@ -13,17 +13,19 @@ class Solution:
         if not root:
             return True
 
-        left = 0
-        right = 0
+        left = 1
+        right = 1
 
         if root.left:
             queue1 = [root.left]
 
             while queue1:
                 level1 = []
+                left += 1
+
                 curr = queue1.pop(0)
                 if curr.left or curr.right:
-                    left += 1
+
                     if curr.left:
                         level1.append(curr.left)
                     if curr.right:
@@ -35,10 +37,11 @@ class Solution:
             queue2 = [root.right]
             while queue2:
                 level2 = []
+                right += 1
 
                 curr = queue2.pop(0)
                 if curr.left or curr.right:
-                    right += 1
+
                     if curr.left:
                         level2.append(curr.left)
                     if curr.right:
@@ -47,6 +50,7 @@ class Solution:
                     queue2 += level2
 
         return abs(left - right) <= 1
+
 
 # my test cases (if tree visualizer is true):
 # [3,9,5,20,null,3,null,15,3,null,4,2,3,7]  says false and output false but should be true
