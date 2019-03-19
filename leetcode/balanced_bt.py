@@ -53,8 +53,7 @@ class Solution:
 
 
 # my test cases (if tree visualizer is true):
-# [3,9,5,20,null,3,null,15,3,null,4,2,3,7]  says false and output false but should be true
-# [3,9,5,20,null,null,15,3,null,4,2,3,7]  says false, but outputs true and should be true
+# [3,9,5,20,null,3,null,15,3,null,4,2,3,7]  says false but output true and should be true
 # [3,9,5,20,null,null,15,3,null,4,2,3,7]  says false, but outputs true and should be true
 
 
@@ -62,3 +61,4 @@ class Solution:
 # []  returns true
 # [1]  returns true
 # [1,null,2,null,3] returns false
+# [1,2,2,3,null,null,3,4,null,null,4]  returns false
