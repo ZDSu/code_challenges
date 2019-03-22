@@ -87,3 +87,21 @@ class Solution:
             curr = temp
         head = prev
         return head
+
+
+# runtime: 44 ms, 65%; memory 14.5 MB, 31%
+class Solution:
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        prev = None
+        curr = head
+
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
