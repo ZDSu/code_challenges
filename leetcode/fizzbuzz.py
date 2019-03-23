@@ -2,6 +2,7 @@
 # https://leetcode.com/articles/fizz-buzz/
 
 
+# runtime 56 ms, 61%; memory 14.1 MB, 5%
 class Solution:
     def fizzBuzz(self, n):
         """
@@ -22,6 +23,7 @@ class Solution:
 
 
 # solution using dict, making it more dynamic in case add more conditions
+# runtime: 60 ms, 32%; memory: 14.2 MB, 5%
 class Solution:
     def fizzBuzz(self, n):
         """
@@ -30,7 +32,7 @@ class Solution:
         """
         result = []
         map = {3: 'Fizz', 5: 'Buzz'}
-        
+
         for num in range(1, n + 1):
             string = ''
             for key in map.keys():
