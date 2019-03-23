@@ -67,3 +67,30 @@ class Solution:
             curr = curr.next
         
         return head
+
+
+# runtime: 80 ms, 55%; memory 16.4 MB, 19%
+class Solution:
+    def removeElements(self, head, val):
+        """
+        :type head: ListNode
+        :type val: int
+        :rtype: ListNode
+        """
+        if not head:
+            return []
+
+        prev = None
+        curr = head
+
+        while curr:
+            if curr.val == val:
+                if not prev:
+                    head = curr.next
+                else:
+                    prev.next = curr.next
+                curr = curr.next
+            else:
+                prev = curr
+                curr = curr.next
+        return head
