@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/remove-linked-list-elements/description/
 
 
+# runtime: 80 ms, 55%; memory 16.3 MB, 19%
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
