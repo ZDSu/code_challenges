@@ -38,7 +38,6 @@ class Solution:
 
         while start <= end:
             mid = (start + end) // 2
-            print(mid)
             if nums[mid] == target:
                 return mid
             elif nums[mid] < target:
