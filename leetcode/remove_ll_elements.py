@@ -29,8 +29,41 @@ class Solution:
 
 
 # test cases:
-# [1], 1
-# [], 1
-# [1], 2
+# [1], 1   returns []
+# [], 1   returns []
+# [1], 2   returns [1]
+# [1,2], 2   returns [1]
 # [1,2], 1   returns [2]
 # [1,1], 1   returns []
+# (mine) [6,1,2,6,3,4,5,6], 6   returns [1,2,3,4,5]
+
+
+# runtime: 96 ms, 22%; memory: 16.4 MB, 19%
+class Solution:
+    def removeElements(self, head, val):
+        """
+        :type head: ListNode
+        :type val: int
+        :rtype: ListNode
+        """
+        if not head:
+            return []
+        
+        prev = None
+        curr = head
+        
+        while curr:
+            if curr.val == val:
+                if not prev:
+                    head = head.next
+                    curr = curr.next
+                    continue
+                
+                prev.next = curr.next
+                curr = curr.next
+                continue
+            
+            prev = curr
+            curr = curr.next
+        
+        return head
