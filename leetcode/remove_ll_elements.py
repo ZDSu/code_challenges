@@ -39,6 +39,7 @@ class Solution:
 
 
 # runtime: 96 ms, 22%; memory: 16.4 MB, 19%
+# runtime: 76 ms, 71%; memory: 16.2 MB, 19%
 class Solution:
     def removeElements(self, head, val):
         """
