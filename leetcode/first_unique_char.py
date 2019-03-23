@@ -53,6 +53,7 @@ class Solution:
 
 
 # runtime 164 ms, 35%; memory 13.4 MB, 5%
+# runtime 132 ms, 52%; memory 13.4 MB, 5%
 class Solution:
     def firstUniqChar(self, s):
         """
@@ -79,6 +80,7 @@ class Solution:
 
 # solution method
 # runtime 108 ms, 80%; memory 13.2 MB, 5%
+# runtime 116 ms, 70%; memory 13.5 MB, 5%
 class Solution:
     def firstUniqChar(self, s):
         """
