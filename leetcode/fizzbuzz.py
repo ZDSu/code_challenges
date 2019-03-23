@@ -42,3 +42,25 @@ class Solution:
                 string = str(num)
             result.append(string)
         return result
+
+
+# runtime: 56 ms, 61%; memory: 14.2 MB, 5%
+class Solution:
+    def fizzBuzz(self, n):
+        """
+        :type n: int
+        :rtype: List[str]
+        """
+        res = []
+        mapping = {3: 'Fizz', 5: 'Buzz'}
+
+        for i in range(1, n + 1):
+            temp = ''
+            for key in mapping.keys():
+                if i % key == 0:
+                    temp += mapping[key]
+            if not temp:
+                res.append(str(i))
+            else:
+                res.append(temp)
+        return res
