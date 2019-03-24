@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/n-ary-tree-level-order-traversal/
 
 
-# runtime 124 ms, 14%; memory 17.6 MB, 5.5%
 """
 # Definition for a Node.
 class Node:
@@ -9,6 +8,27 @@ class Node:
         self.val = val
         self.children = children
 """
+
+# runtime 104 ms, 47%; memory 17.5 MB, 5%
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+        if not root:
+            return []
+
+        res = []
+        queue = [root]
+        while queue:
+            level = []
+            for _ in range(len(queue)):
+                curr = queue.pop(0)
+                if curr.children:
+                    queue += curr.children
+                level.append(curr.val)
+            res.append(level)
+        return res
+
+
+# runtime 124 ms, 14%; memory 17.6 MB, 5.5%
 class Solution:
     def levelOrder(self, root: 'Node') -> List[List[int]]:
         if not root:
@@ -32,7 +52,6 @@ class Solution:
 # runtime 108 ms, 28%; memory 17.7 MB, 5.5%
 # ran again after solutions below and got:
 # runtime 100 ms, 50%; memory 17.6 MB, 5.5%
-
 class Solution:
     def levelOrder(self, root: 'Node') -> List[List[int]]:
         if not root:
