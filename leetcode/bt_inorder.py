@@ -73,3 +73,22 @@ class Solution:
 
         _traverse(root)
         return traverse
+
+
+# runtime 36 ms, 77%; memory 13 MB, 6%
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        res = []
+        stack = []
+        curr = root
+
+        while curr or stack:
+            if curr:
+                stack.append(curr)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+                res.append(curr.val)
+                curr = curr.right
+
+        return res
