@@ -2,7 +2,6 @@
 # https://leetcode.com/problems/binary-tree-inorder-traversal/
 
 
-# (recursive) runtime 20 ms, 100%; memory 10.7 MB, 62%
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -10,6 +9,8 @@
 #         self.left = None
 #         self.right = None
 
+
+# (recursive) runtime 20 ms, 100%; memory 10.7 MB, 62%
 class Solution(object):
     def inorderTraversal(self, root):
         """
@@ -33,13 +34,6 @@ class Solution(object):
 
 
 # (iterative) runtime 20 ms, 100%; memory 10.9 MB, 6%
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution(object):
     def inorderTraversal(self, root):
         """
@@ -62,3 +56,20 @@ class Solution(object):
                 root = root.right
 
         return res
+
+
+# runtime 36 ms, 77%; memory 13.1 MB, 6%
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        traverse = []
+
+        def _traverse(node):
+            if node:
+                if node.left:
+                    _traverse(node.left)
+                traverse.append(node.val)
+                if node.right:
+                    _traverse(node.right)
+
+        _traverse(root)
+        return traverse
