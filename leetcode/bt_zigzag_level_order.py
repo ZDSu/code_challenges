@@ -73,3 +73,34 @@ class Solution:
             res.append(level)
         
         return res
+
+
+# runtime 40 ms, 68%; memory 13.4 MB, 5%
+class Solution:
+    def zigzagLevelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+
+        res = []
+        queue = [root]
+        left = True
+
+        while queue:
+            level = []
+            for _ in range(len(queue)):
+                curr = queue.pop(0)
+                if curr.left:
+                    queue.append(curr.left)
+                if curr.right:
+                    queue.append(curr.right)
+                if left:
+                    level.append(curr.val)
+                else:
+                    level.insert(0, curr.val)
+            res.append(level)
+            left = not left
+        return res
