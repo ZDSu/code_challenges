@@ -8,6 +8,7 @@
 #         self.left = None
 #         self.right = None
 
+# runtime 40 ms, 68%; memory 13.3 MB, 5%
 class Solution:
     def zigzagLevelOrder(self, root):
         """
@@ -38,15 +39,8 @@ class Solution:
         return res
 
 
-# leetcode says this way is faster:
-
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
+# leetcode says this way is faster, but all give same results
+# runtime 40 ms, 68%; memory 13.3 MB, 5%
 class Solution:
     def zigzagLevelOrder(self, root):
         """
