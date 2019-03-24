@@ -66,6 +66,7 @@ class Solution:
 
 
 # best solution
+# runtime 40 ms, 73%; memory 13.3 MB, 5%
 class Solution:
     def longestCommonPrefix(self, strs):
         """
@@ -81,3 +82,23 @@ class Solution:
                 if word[i] != shortest[i]:
                     return shortest[:i]
         return shortest
+
+
+# runtime 44ms, 45%; memory 13.1 MB, 5%
+class Solution:
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        if not strs:
+            return ''
+
+        prefix = ''
+        for i in range(len(strs[0])):
+            temp = prefix + strs[0][i]
+            for j in range(len(strs)):
+                if strs[j][:i+1] != temp:
+                    return prefix
+            prefix = temp
+        return prefix
