@@ -160,3 +160,27 @@ class Solution:
         if temp:
             return False
         return True
+
+
+# runtime 36 ms, 83%; memory 12.9 MB, 5%
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        parens = {'(': ')', '{': '}', '[': ']'}
+        close = set(')}]')
+        stack = []
+
+        for char in s:
+            if char in parens:
+                stack.append(char)
+            elif char in close:
+                if stack:
+                    temp = stack.pop()
+                    if parens[temp] != char:
+                        return False
+                else:
+                    return False
+        return not stack
