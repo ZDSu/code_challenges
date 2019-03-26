@@ -62,6 +62,8 @@ class Solution:
 
 
 # hash solution from newly written solution article; also comes out 32 ms, 100%, just like solution below
+# runtime 52 ms, 23%; memory 13.2 MB, 5%
+# then immediately after, runtime 36 ms, 83%; memory 13.4 MB, 5%
 class Solution:
     def isValid(self, s):
         """
