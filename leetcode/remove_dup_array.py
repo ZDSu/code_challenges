@@ -26,7 +26,8 @@ class Solution:
         return j
 
 
-# some of the test cases:
+# test cases:
+# [1,1]
 # [1, 1, 2]
 # [1, 2, 2]
 # [1, 1, 1]
@@ -56,6 +57,7 @@ class Solution:
         return i + 1
 
 
+# runtime 56 ms, 95%; memory 14.7 MB, 5%
 class Solution:
     def removeDuplicates(self, nums):
         """
