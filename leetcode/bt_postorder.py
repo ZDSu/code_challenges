@@ -2,7 +2,6 @@
 # https://leetcode.com/problems/binary-tree-postorder-traversal/
 
 
-# (recursive) runtime 20ms, 100%; memory 10.9 MB, 14%
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -10,6 +9,8 @@
 #         self.left = None
 #         self.right = None
 
+
+# (recursive) runtime 20ms, 100%; memory 10.9 MB, 14%
 class Solution(object):
     def postorderTraversal(self, root):
         """
@@ -29,4 +30,22 @@ class Solution(object):
             res.append(node.val)
 
         travel(root)
+        return res
+
+
+# runtime 36 ms, 74%; memory 13.3 MB, 6%
+class Solution:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
+        if not root:
+            return []
+
+        res = []
+        def _traverse(node):
+            if node:
+                if node.left:
+                    _traverse(node.left)
+                if node.right:
+                    _traverse(node.right)
+                res.append(node.val)
+        _traverse(root)
         return res
