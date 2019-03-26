@@ -42,6 +42,7 @@ class Solution:
 
 
 # runtime: 200 ms, 29%; memory: 18.5 MB, 1%
+# runtime: 180ms, 50%; memory 17.6 MB, 11%
 class Solution(object):
     def reverseString(self, s):
         """
