@@ -60,3 +60,17 @@ performance N/A
 
 wrong: ([5, -1000], 1)
 """
+
+
+def solution(nums, k):
+    # write your code in Python 3.6
+    nums[:] = nums[len(nums) - k:] + nums[:len(nums) - k]
+    return nums
+
+"""
+task score 87%
+correctness 87%
+performance N/A
+
+wrong: ([1, 1, 2, 3, 5], 42)  returns [3, 5, 1, 1, 2]
+"""
