@@ -59,3 +59,30 @@ performance 80%  (pass 13/14 tests)
 
 wrong: '{{{{'  returns 0
 """
+
+
+def solution(S):
+    parens = {'(': ')', '{': '}', '[': ']'}
+    close = set(')}]')
+    stack = []
+
+    for char in S:
+        if char in parens:
+            stack.append(char)
+        elif char in close:
+            if stack:
+                temp = stack.pop()
+                if parens[temp] != char:
+                    return 0
+            else:
+                return 0
+    if stack:
+        return 0
+    return 1
+
+"""
+Results: https://app.codility.com/demo/results/trainingNHXBW2-4C7/
+task score 100%
+correctness 100%
+performance 100%
+"""
