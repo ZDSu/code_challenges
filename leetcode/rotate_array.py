@@ -2,6 +2,7 @@
 # https://leetcode.com/articles/rotate-array/
 
 
+# runtime 128 ms, 22%, memory 13.5 MB, 5%
 class Solution:
     def rotate(self, nums, k):
         """
@@ -24,6 +25,7 @@ class Solution:
         nums[:] = nums[-k:] + nums[:-k]
 
 
+# runtime 52 ms, 76%; memory 13.6 MB, 5%
 class Solution:
     def rotate(self, nums, k):
         """
