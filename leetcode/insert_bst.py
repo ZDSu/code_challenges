@@ -8,6 +8,8 @@
 #         self.left = None
 #         self.right = None
 
+
+# runtime 140 ms, 24%; memory 15.3 MB, 5%
 class Solution:
     def insertIntoBST(self, root, value):
         """
@@ -16,7 +18,7 @@ class Solution:
         :rtype: TreeNode
         """
         current = root
-        
+
         while current:
             if current.val > value:
                 if current.left is not None:
@@ -39,6 +41,7 @@ class Solution:
 
 
 # 120 ms, 92%
+# runtime 124 ms, 70%; memory 15.6 MB, 5%
 class Solution:
     def insertIntoBST(self, root, value):
         """
@@ -60,4 +63,31 @@ class Solution:
                 else:
                     curr.left = TreeNode(value)
                     break
+        return root
+
+
+# runtime 124 ms, 70%; memory 15.5 MB, 5%
+class Solution:
+    def insertIntoBST(self, root, value):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        if not root:
+            return TreeNode(value)
+
+        def _traverse(node):
+            if node.val > value:
+                if node.left:
+                    _traverse(node.left)
+                else:
+                    node.left = TreeNode(value)
+            else:
+                if node.right:
+                    _traverse(node.right)
+                else:
+                    node.right = TreeNode(value)
+
+        _traverse(root)
         return root
