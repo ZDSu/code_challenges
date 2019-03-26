@@ -40,7 +40,7 @@ class Solution:
                     return root
 
 
-# 120 ms, 92%
+# runtime 120 ms, 92%; memory 15.3 MB, 5%
 # runtime 124 ms, 70%; memory 15.6 MB, 5%
 class Solution:
     def insertIntoBST(self, root, value):
