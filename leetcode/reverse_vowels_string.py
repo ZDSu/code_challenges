@@ -1,20 +1,26 @@
 # https://leetcode.com/problems/reverse-vowels-of-a-string/submissions/
 
 
+# runtime 56 ms, 100%; memory 14.3 MB, 19%
 class Solution:
     def reverseVowels(self, s: str) -> str:
         s = list(s)
-        vowels = {'a', 'e', 'i', 'o', 'u'}
+        vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+        i = 0
         j = len(s) - 1
-        for i in range(len(s)):
-            if s[i] in vowels:
-                while j > i:
-                    if s[j] in vowels:
-                        s[i], s[j] = s[j], s[i]
-                        j -= 1
-                        continue
-                    j -= 1
+        while i < j:
+            if s[i] not in vowels:
+                i += 1
+                continue
+            if s[j] not in vowels:
+                j -= 1
+                continue
+            s[i], s[j] = s[j], s[i]
+            i += 1
+            j -= 1
 
         return ''.join(s)
 
-# testcase: "aA"  returns "Aa"
+# testcases:
+# "aA"  returns "Aa"
+# "race car"   returns "race car"
