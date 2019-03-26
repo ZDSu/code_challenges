@@ -77,6 +77,7 @@ class Solution:
         return single + 1
 
 
+# runtime 60 ms, 80%; memory 14.7 MB, 5%
 class Solution:
     def removeDuplicates(self, nums):
         """
@@ -90,5 +91,5 @@ class Solution:
         for i in range(1, len(nums)):
             if nums[j] != nums[i]:
                 nums[j + 1], nums[i] = nums[i], nums[j + 1]
-                j += 1 
+                j += 1
         return j + 1
