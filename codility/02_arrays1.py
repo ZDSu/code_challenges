@@ -1,5 +1,6 @@
 """
 Cyclic Rotation (Easy difficulty)
+Rotate an array to the right by a given number of steps.
 
 An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
 
@@ -54,6 +55,7 @@ def solution(A, K):
 # ([1,2],0)
 
 """
+Results: https://app.codility.com/demo/results/trainingEDYM9X-ASR/
 task score 25%
 correctness 25%
 performance N/A
@@ -68,6 +70,7 @@ def solution(nums, k):
     return nums
 
 """
+Results: https://app.codility.com/demo/results/trainingBXVSXU-UD8/
 task score 87%
 correctness 87%
 performance N/A
