@@ -73,3 +73,6 @@ class Solution(object):
             recurse(start + 1, stop - 1, string)
 
         recurse(0, len(s) - 1, s)
+
+
+# note: All the 100% submissions are not valid and don't work now (i.e.,  `return s[::-1]` )
