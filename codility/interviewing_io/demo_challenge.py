@@ -37,8 +37,14 @@ def solution(A):
 
     return j
 
+
+# My test cases:
+# []  returns 1
+# [5, 5, 5]  returns 1
+
 """
 Test Score: 55%  (55/100 points)
+Results: https://app.codility.com/demo/results/demoG8RSUF-YUH/
 
 Task Details:
 - Task Score: 55%
@@ -52,15 +58,10 @@ The following issues have been detected: wrong answers. For example, for the inp
     - extreme_min_max_value (minimal and maximal values) [both wrong: expected 1 got 2 and expected 6 got 2]
     - positive_only (shuffled sequence of 0...100 and then 102...200) [one of two wrong: expected 101 got 2]
     - negative_only (shuffled sequence -100...-1)
+
 - Performance: 50% (missed 4/7)
     - medium (chaotic sequences length=10005 (with minus)) [all 3 wrong: expected 111 got 997, expected 101 got 102, expected 5 got 4988]
     - large_1 (chaotic + sequence 1, 2, ..., 40000 (without minus))
     - large_2 (shuffled sequence 1, 2, ..., 100000 (without minus))
     - large_3 (chaotic + many -1, 1, 2, 3 (with minus)) [wrong: expected 10000 got 2]
-"""
-
-"""
-My custom test cases:
-[]  returns 1
-[5, 5, 5]  returns 1
 """
