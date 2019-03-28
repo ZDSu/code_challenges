@@ -53,6 +53,15 @@ class Solution:
 # [1,2,1]
 # [5,4,5]
 
-# test cases: 
+# test cases:
 # [1,1,1,1,1]
 # [0,2,2,1,1]
+
+
+# runtime 36 ms, 99%; memory 13.2 MB, 5%
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        nums = set(nums)
+        for i in range(1, 100001):
+            if i not in nums:
+                return i
