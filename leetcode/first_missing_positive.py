@@ -6,6 +6,8 @@ class Solution:
         nums.sort()
         if not nums or nums[-1] < 1 or nums[0] > 1:
             return 1
+        if nums[0] == nums[-1]:
+            return nums[0] + 1
 
         j = 0
         while nums[j] < 1:
@@ -25,6 +27,8 @@ class Solution:
         nums.sort()
         if not nums or nums[-1] < 1 or nums[0] > 1:
             return 1
+        if nums[0] == nums[-1]:
+            return nums[0] + 1
 
         j = 0
         while nums[j] < 1:
@@ -43,5 +47,12 @@ class Solution:
 # [-1]
 # [-1,-1]
 # [1,2,2,3]
+# [2,1,2,3,2]
+# [2,1,2,3,1]
+# [2,2,1]
+# [1,2,1]
+# [5,4,5]
 
-# test case: [1,1,1,1,1]
+# test cases: 
+# [1,1,1,1,1]
+# [0,2,2,1,1]
