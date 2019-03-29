@@ -65,15 +65,15 @@ wrong: ([5, -1000], 1)
 
 
 def solution(nums, k):
-    # write your code in Python 3.6
     nums[:] = nums[len(nums) - k:] + nums[:len(nums) - k]
     return nums
 
 """
 Results: https://app.codility.com/demo/results/trainingBXVSXU-UD8/
 task score 87%
-correctness 87%
+correctness 87% (missed 1/33)
 performance N/A
 
-wrong: ([1, 1, 2, 3, 5], 42)  returns [3, 5, 1, 1, 2]
+wrong: 
+- small2 (small functional tests, K >= N): ([1, 1, 2, 3, 5], 42)  returns [3, 5, 1, 1, 2]
 """
