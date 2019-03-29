@@ -89,7 +89,7 @@ def solution(N):
 # Detected time complexity: O(N) or O(N * log(N))
 
 """
-Results: https://app.codility.com/demo/results/training463P6C-CS8/
+Results: https://app.codility.com/demo/results/trainingXZM72M-E5F/
 test score 100%
 task score 100%
 correctness 100%
