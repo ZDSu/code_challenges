@@ -65,3 +65,33 @@ correctness 40% (missed 9/25):
 - large3: 805306373  returns 25
 - large6: 1610612737  returns 28
 """
+
+
+def solution(N):
+    N = f'{N:08b}'
+    gap = 0
+    temp = 0
+    one = False
+    for bi in N:
+        if bi == '1':
+            if one and temp:
+                if temp > gap:
+                    gap = temp
+                temp = 0
+            if not one:
+                one = True
+        else:  # bi == 0
+            if one:
+                temp += 1
+
+    return gap
+
+# Detected time complexity: O(N) or O(N * log(N))
+
+"""
+Results: https://app.codility.com/demo/results/training463P6C-CS8/
+test score 100%
+task score 100%
+correctness 100%
+performance N/A
+"""
