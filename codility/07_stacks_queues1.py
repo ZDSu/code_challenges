@@ -40,3 +40,14 @@ Write an efficient algorithm for the following assumptions:
 
 Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 """
+
+
+def solution(A, B):
+    pass
+
+"""
+Results: 
+task score %
+correctness %
+performance %
+"""
