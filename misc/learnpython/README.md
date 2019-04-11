@@ -30,7 +30,7 @@ Source: http://www.learnpython.org/en/Welcome
 - Partial functions
 - Code Introspection
 - Closures
-- Decorators
+- [Decorators](http://www.learnpython.org/en/Decorators)
 
 ### Other Python Tutorials
 - DataCamp has tons of great interactive Python Tutorials covering data manipulation, data visualization, statistics, machine learning, and more
