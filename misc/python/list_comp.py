@@ -1,8 +1,9 @@
 """
 List Comprehension practice
+
 https://www.reddit.com/r/learnpython/comments/4d2yl7/i_need_list_comprehension_exercises_to_drill/
-Also look at: http://www.learnpython.org/en/List_Comprehensions
-Practice mechanically translating a list comprehension into the equivalent for loop and back again.
+
+Tip: Practice mechanically translating a list comprehension into the equivalent for loop and back again.
 """
 
 # Find all of the numbers from 1-1000 that are divisible by 7
@@ -31,3 +32,26 @@ short = [word ]
 # Use a nested list comprehension to find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9)
 
 # For all the numbers 1-1000, use a nested list/dictionary comprehension to find the highest single digit any of the numbers is divisible by
+
+
+"""
+From: http://www.learnpython.org/en/List_Comprehensions
+"""
+# create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
+lengths = [len(word) for word in sentence.split() if word != 'the']
+print(lengths)
+
+# long way
+sentence = "the quick brown fox jumps over the lazy dog"
+words = sentence.split()
+word_lengths = []
+for word in words:
+      if word != "the":
+          word_lengths.append(len(word))
+print(words)
+print(word_lengths)
+
+
+# create a new list called "newlist" out of the list "numbers", which contains only the positive numbers from the list, as integers.
+newlist = [int(num) for num in numbers if num > -1]
+print(newlist)
