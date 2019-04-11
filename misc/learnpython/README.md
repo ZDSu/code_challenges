@@ -20,7 +20,7 @@ Source: http://www.learnpython.org/en/Welcome
 - Pandas Basics
 
 ### Advanced Tutorials
-- Generators
+- [Generators](http://www.learnpython.org/en/Generators)
 - List Comprehensions
 - Multiple Function Arguments
 - Regular Expressions
