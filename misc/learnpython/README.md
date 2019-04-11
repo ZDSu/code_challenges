@@ -4,7 +4,7 @@ Source: http://www.learnpython.org/en/Welcome
 ### Learn the Basics
 - [Hello, World!](http://www.learnpython.org/en/Hello%2C_World%21)
 - [Variables and Types](http://www.learnpython.org/en/Variables_and_Types)
-- Lists
+- [Lists](http://www.learnpython.org/en/Lists)
 - Basic Operators
 - String Formatting
 - Basic String Operations
