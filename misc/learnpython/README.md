@@ -11,7 +11,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Conditions](http://www.learnpython.org/en/Conditions)
 - [Loops](http://www.learnpython.org/en/Loops)
 - [Functions](http://www.learnpython.org/en/Functions)
-- Classes and Objects
+- [Classes and Objects](http://www.learnpython.org/en/Classes_and_Objects)
 - Dictionaries
 - Modules and Packages
 
