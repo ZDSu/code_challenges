@@ -23,7 +23,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Generators](http://www.learnpython.org/en/Generators)
 - [List Comprehensions](http://www.learnpython.org/en/List_Comprehensions)
 - [Multiple Function Arguments](http://www.learnpython.org/en/Multiple_Function_Arguments)
-- Regular Expressions
+- [Regular Expressions](http://www.learnpython.org/en/Regular_Expressions)
 - Exception Handling
 - Sets
 - Serialization
