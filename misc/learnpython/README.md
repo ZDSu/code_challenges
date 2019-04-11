@@ -6,7 +6,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Variables and Types](http://www.learnpython.org/en/Variables_and_Types)
 - [Lists](http://www.learnpython.org/en/Lists)
 - [Basic Operators](http://www.learnpython.org/en/Basic_Operators)
-- String Formatting
+- [String Formatting](http://www.learnpython.org/en/String_Formatting)
 - Basic String Operations
 - Conditions
 - Loops
