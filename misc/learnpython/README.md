@@ -3,7 +3,7 @@ Source: http://www.learnpython.org/en/Welcome
 ## Table of Contents
 ### Learn the Basics
 - [Hello, World!](http://www.learnpython.org/en/Hello%2C_World%21)
-- Variables and Types
+- [Variables and Types](http://www.learnpython.org/en/Variables_and_Types)
 - Lists
 - Basic Operators
 - String Formatting
