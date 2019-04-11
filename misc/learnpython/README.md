@@ -21,7 +21,7 @@ Source: http://www.learnpython.org/en/Welcome
 
 ### Advanced Tutorials
 - [Generators](http://www.learnpython.org/en/Generators)
-- List Comprehensions
+- [List Comprehensions](http://www.learnpython.org/en/List_Comprehensions)
 - Multiple Function Arguments
 - Regular Expressions
 - Exception Handling
