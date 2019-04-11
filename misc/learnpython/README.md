@@ -8,7 +8,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Basic Operators](http://www.learnpython.org/en/Basic_Operators)
 - [String Formatting](http://www.learnpython.org/en/String_Formatting)
 - [Basic String Operations](http://www.learnpython.org/en/Basic_String_Operations)
-- Conditions
+- [Conditions](http://www.learnpython.org/en/Conditions)
 - Loops
 - Functions
 - Classes and Objects
