@@ -7,7 +7,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Lists](http://www.learnpython.org/en/Lists)
 - [Basic Operators](http://www.learnpython.org/en/Basic_Operators)
 - [String Formatting](http://www.learnpython.org/en/String_Formatting)
-- Basic String Operations
+- [Basic String Operations](http://www.learnpython.org/en/Basic_String_Operations)
 - Conditions
 - Loops
 - Functions
