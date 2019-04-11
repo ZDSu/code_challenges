@@ -22,7 +22,7 @@ Source: http://www.learnpython.org/en/Welcome
 ### Advanced Tutorials
 - [Generators](http://www.learnpython.org/en/Generators)
 - [List Comprehensions](http://www.learnpython.org/en/List_Comprehensions)
-- Multiple Function Arguments
+- [Multiple Function Arguments](http://www.learnpython.org/en/Multiple_Function_Arguments)
 - Regular Expressions
 - Exception Handling
 - Sets
