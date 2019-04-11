@@ -12,7 +12,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Loops](http://www.learnpython.org/en/Loops)
 - [Functions](http://www.learnpython.org/en/Functions)
 - [Classes and Objects](http://www.learnpython.org/en/Classes_and_Objects)
-- Dictionaries
+- [Dictionaries](http://www.learnpython.org/en/Dictionaries)
 - Modules and Packages
 
 ### Data Science Tutorials
