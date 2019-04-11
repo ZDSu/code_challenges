@@ -9,7 +9,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [String Formatting](http://www.learnpython.org/en/String_Formatting)
 - [Basic String Operations](http://www.learnpython.org/en/Basic_String_Operations)
 - [Conditions](http://www.learnpython.org/en/Conditions)
-- Loops
+- [Loops](http://www.learnpython.org/en/Loops)
 - Functions
 - Classes and Objects
 - Dictionaries
