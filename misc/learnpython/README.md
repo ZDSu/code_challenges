@@ -10,7 +10,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Basic String Operations](http://www.learnpython.org/en/Basic_String_Operations)
 - [Conditions](http://www.learnpython.org/en/Conditions)
 - [Loops](http://www.learnpython.org/en/Loops)
-- Functions
+- [Functions](http://www.learnpython.org/en/Functions)
 - Classes and Objects
 - Dictionaries
 - Modules and Packages
