@@ -2,7 +2,7 @@ Source: http://www.learnpython.org/en/Welcome
 
 ## Table of Contents
 ### Learn the Basics
-- Hello, World!
+- [Hello, World!](http://www.learnpython.org/en/Hello%2C_World%21)
 - Variables and Types
 - Lists
 - Basic Operators
