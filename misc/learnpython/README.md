@@ -13,7 +13,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Functions](http://www.learnpython.org/en/Functions)
 - [Classes and Objects](http://www.learnpython.org/en/Classes_and_Objects)
 - [Dictionaries](http://www.learnpython.org/en/Dictionaries)
-- Modules and Packages
+- [Modules and Packages](http://www.learnpython.org/en/Modules_and_Packages)
 
 ### Data Science Tutorials
 - Numpy Arrays
