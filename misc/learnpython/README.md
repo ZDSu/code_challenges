@@ -5,7 +5,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Hello, World!](http://www.learnpython.org/en/Hello%2C_World%21)
 - [Variables and Types](http://www.learnpython.org/en/Variables_and_Types)
 - [Lists](http://www.learnpython.org/en/Lists)
-- Basic Operators
+- [Basic Operators](http://www.learnpython.org/en/Basic_Operators)
 - String Formatting
 - Basic String Operations
 - Conditions
