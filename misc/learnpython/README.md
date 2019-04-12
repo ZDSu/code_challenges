@@ -28,7 +28,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Sets](http://www.learnpython.org/en/Sets)
 - [Serialization](http://www.learnpython.org/en/Serialization)
 - [Partial functions](http://www.learnpython.org/en/Partial_functions)
-- Code Introspection
+- [Code Introspection](http://www.learnpython.org/en/Code_Introspection)
 - Closures
 - [Decorators](http://www.learnpython.org/en/Decorators)
 
