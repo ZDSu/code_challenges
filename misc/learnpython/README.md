@@ -27,7 +27,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Exception Handling](http://www.learnpython.org/en/Exception_Handling)
 - [Sets](http://www.learnpython.org/en/Sets)
 - [Serialization](http://www.learnpython.org/en/Serialization)
-- Partial functions
+- [Partial functions](http://www.learnpython.org/en/Partial_functions)
 - Code Introspection
 - Closures
 - [Decorators](http://www.learnpython.org/en/Decorators)
