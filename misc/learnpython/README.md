@@ -24,7 +24,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [List Comprehensions](http://www.learnpython.org/en/List_Comprehensions)
 - [Multiple Function Arguments](http://www.learnpython.org/en/Multiple_Function_Arguments)
 - [Regular Expressions](http://www.learnpython.org/en/Regular_Expressions)
-- Exception Handling
+- [Exception Handling](http://www.learnpython.org/en/Exception_Handling)
 - Sets
 - Serialization
 - Partial functions
