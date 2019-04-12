@@ -26,7 +26,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Regular Expressions](http://www.learnpython.org/en/Regular_Expressions)
 - [Exception Handling](http://www.learnpython.org/en/Exception_Handling)
 - [Sets](http://www.learnpython.org/en/Sets)
-- Serialization
+- [Serialization](http://www.learnpython.org/en/Serialization)
 - Partial functions
 - Code Introspection
 - Closures
