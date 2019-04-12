@@ -29,7 +29,7 @@ Source: http://www.learnpython.org/en/Welcome
 - [Serialization](http://www.learnpython.org/en/Serialization)
 - [Partial functions](http://www.learnpython.org/en/Partial_functions)
 - [Code Introspection](http://www.learnpython.org/en/Code_Introspection)
-- Closures
+- [Closures](http://www.learnpython.org/en/Closures)
 - [Decorators](http://www.learnpython.org/en/Decorators)
 
 ### Other Python Tutorials
