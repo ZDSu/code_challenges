@@ -65,3 +65,12 @@ class Solution:
             fn0 = t
             i = i + 1
         return fn1
+
+
+# recursive solution
+# runtime 1304 ms, 5%; memory 13.3 MB, 5%
+class Solution:
+    def fib(self, N: int) -> int:
+        if N == 0 or N == 1:
+            return N
+        return self.fib(N - 1) + self.fib(N - 2)
