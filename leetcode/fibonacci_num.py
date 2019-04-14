@@ -19,6 +19,20 @@ class Solution:
         return res
 
 
+# runtime 36 ms, 79%; memory 13.2 MB, 5%
+class Solution:
+    def fib(self, N: int) -> int:
+        if N == 0 or N == 1:
+            return N
+
+        one = 0
+        two = 1
+        for _ in range(2, N + 1):
+            temp = one + two
+            one = two
+            two = temp
+        return two
+
 
 # runtime 36 ms, 79%; memory 13.1 MB, 5%
 class Solution:
