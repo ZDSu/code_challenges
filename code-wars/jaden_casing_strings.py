@@ -35,3 +35,10 @@ def toJadenCase(string):
     for word in string:
         res.append(word.capitalize())
     return ' '.join(res)
+
+
+# one liner with import string
+import string
+
+def toJadenCase(NonJadenStrings):
+    return string.capwords(NonJadenStrings)
