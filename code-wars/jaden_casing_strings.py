@@ -25,3 +25,13 @@ def toJadenCase(string):
         else:
             res.append(word.title())
     return ' '.join(res)
+
+
+def toJadenCase(string):
+    if not string:
+        return ''
+    string = string.split()
+    res = []
+    for word in string:
+        res.append(word.capitalize())
+    return ' '.join(res)
