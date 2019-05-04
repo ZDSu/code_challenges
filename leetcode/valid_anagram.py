@@ -70,4 +70,25 @@ class Solution:
         return True
 
 
-# test case: 'ab', 'a'
+# runtime 96 ms, 6%; memory 13.2 MB, 32%
+import collections
+class Solution:
+    def isAnagram(self, s1, s2):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        str1 = collections.Counter(s1)
+        for char in s2:
+            if char not in str1:
+                return False
+
+            str1[char] -= 1
+            if str1[char] == 0:
+                del str1[char]
+        return not str1
+
+# test cases:
+# 'ab', 'a'
+# '', ''
