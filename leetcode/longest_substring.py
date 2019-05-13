@@ -27,4 +27,22 @@ class Solution:
         return longest
 
 
+# runtime 56 ms, 99.5%; memory 13.3 MB, 5%
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        if not s:
+            return 0
+
+        ls = ''
+        longest = 0
+        for char in s:
+            if char in ls:
+                if len(ls) > longest:
+                    longest = len(ls)
+                ls = ls[ls.index(char) + 1:]
+            ls += char
+        if len(ls) > longest:
+            longest = len(ls)
+        return longest
+
 # test cases:  "au", "dvdf"
