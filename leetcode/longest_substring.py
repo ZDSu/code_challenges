@@ -25,3 +25,6 @@ class Solution:
         if len(chars) > longest:
             longest = len(chars)
         return longest
+
+
+# test cases:  "au", "dvdf"
