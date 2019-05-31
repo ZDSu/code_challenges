@@ -10,7 +10,7 @@ class Solution:
         """
         if s == '':
             return True
-        
+
         open = ''
         for each in s:
             if each == '(' or each == '{' or each == '[':
@@ -64,6 +64,7 @@ class Solution:
 # hash solution from newly written solution article; also comes out 32 ms, 100%, just like solution below
 # runtime 52 ms, 23%; memory 13.2 MB, 5%
 # then immediately after, runtime 36 ms, 83%; memory 13.4 MB, 5%
+# runtime 32 ms, 97%; memory 13.4 MB, 8%
 class Solution:
     def isValid(self, s):
         """
@@ -76,7 +77,7 @@ class Solution:
             ']': '['
         }
         stack = []
-        
+
         for char in s:
             if char in parens and stack:
                 if stack[-1] == parens[char]:
@@ -85,7 +86,7 @@ class Solution:
                     return False
             else:
                 stack.append(char)
-        
+
         return not stack
 
 
@@ -98,13 +99,13 @@ class Solution:
         """
         if not s:
             return True
-        
+
         if len(s) % 2 == 1:
             return False
-        
+
         left = '{[('
         temp = ''
-        
+
         for char in s:
             if char in left:
                 temp += char
