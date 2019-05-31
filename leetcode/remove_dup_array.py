@@ -93,3 +93,23 @@ class Solution:
                 nums[j + 1], nums[i] = nums[i], nums[j + 1]
                 j += 1
         return j + 1
+
+
+# runtime 60 ms, 84%; memory 14.9 MB, 33%
+class Solution:
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return
+
+        i = j = 0
+        while j < len(nums):
+            if nums[i] == nums[j]:
+                j += 1
+            else:
+                i += 1
+                nums[i] = nums[j]
+        return i + 1
