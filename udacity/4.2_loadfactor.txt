@@ -5,3 +5,7 @@ a. 87
 b. 125
 c. 107
 d. 1001
+
+Answers:
+1. 1 [For the load factor, divide the number of values by the number of buckets]
+2. c [125 is also a multiple of 5, which will cause a lot of collisions; 87 is better but since it is less than 100, there will still be collisions; 1001 is good but will create many leftover buckets and waste memory]
