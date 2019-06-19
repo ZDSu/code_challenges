@@ -9,9 +9,33 @@ class BST(object):
         self.root = Node(root)
 
     def insert(self, new_val):
-        pass
+        if not self.root:
+            self.root = Node(new_val)
+            return
+
+        curr = self.root
+        while curr:
+            if curr.value < new_val:
+                if not curr.right:
+                    curr.right = Node(new_val)
+                    return
+                curr = curr.right
+            else:
+                if not curr.left:
+                    curr.left = Node(new_val)
+                    return
+                curr = curr.left
+
 
     def search(self, find_val):
+        curr = self.root
+        while curr:
+            if curr.value == find_val:
+                return True
+            if curr.value < find_val:
+                curr = curr.right
+            else:
+                curr = curr.left
         return False
 
 # Set up tree
