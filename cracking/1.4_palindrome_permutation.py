@@ -15,7 +15,15 @@ https://leetfree.com/problems/palindrome-permutation.html
 def pal_perm(s):
     chars = {}
     for char in s:
-        if char in chars:
-            chars[char] +== 1
-        else:
-            chars[char] == 1
+        if char != ' ':
+            if char in chars:
+                if chars[char] == 1:
+                    del chars[char]
+                else:
+                    chars[char] -= 1
+            else:
+                chars[char] = 1
+
+    if len(chars) > 1:
+        return False
+    return True
