@@ -8,6 +8,7 @@ Output: True (permutations: "taco cat", "atco cta", etc.)
 Hints: #106, #121, #134, #136
 
 https://leetcode.com/problems/palindrome-permutation
+https://leetfree.com/problems/palindrome-permutation.html
 """
 
 
@@ -18,5 +19,3 @@ def pal_perm(s):
             chars[char] +== 1
         else:
             chars[char] == 1
-    
-    
