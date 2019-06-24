@@ -36,6 +36,7 @@ class Solution:
 
 
 # from solution
+# runtime 20 ms, 82%, memory 11.7, 73%
 class Solution:
     def removeElement(self, nums, val):
         """
@@ -70,4 +71,21 @@ class Solution(object):
                 j -= 1
             else:
                 i += 1
+        return i
+
+
+# runtime 16 ms, 94%; memory 11.7 MB, 62%
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        i = j = 0
+        while j < len(nums):
+            if nums[j] != val:
+                nums[i] = nums[j]
+                i += 1
+            j += 1
         return i
