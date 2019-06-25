@@ -8,14 +8,14 @@ class Solution(object):
         :rtype: int
         """
         largest = curr = nums[0]
-        
+
         for i in range(1, len(nums)):
             curr = max(nums[i], curr + nums[i])
             largest = max(largest, curr)
         return largest
 
 
-# test cases [-2,1]
+# test cases [-2,1]  returns 1
 
 # beats 98.75%, takes less time to run by not using max function
 # when ran again along with 2 new solutions below, runtime: 44 ms, 94%; memory: 13.6 MB, 5.5%
@@ -72,4 +72,23 @@ class Solution:
             temp = max(temp + num, num)
             largest = max(temp, largest)
 
+        return largest
+
+
+# runtime 40 ms, 95%; memory 12.3 MB, 67%
+class Solution(object):
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        largest = temp = nums[0]
+
+        for i in range(1, len(nums)):
+            if nums[i] + temp < nums[i]:
+                temp = nums[i]
+            else:
+                temp += nums[i]
+            if temp > largest:
+                largest = temp
         return largest
