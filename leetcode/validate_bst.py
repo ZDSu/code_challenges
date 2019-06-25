@@ -9,6 +9,7 @@
 #         self.left = None
 #         self.right = None
 
+# runtime 44ms, 28%, memory 16.5 MB, 56%
 class Solution(object):
     def isValidBST(self, root):
         """
@@ -16,21 +17,18 @@ class Solution(object):
         :rtype: bool
         """
 
-        def traverse(node, prev, child):
+        def traverse(node, lower=float('-inf'), upper=float('inf')):
             if node:
-                if child == 'left':
-                    if node.val > prev:
-                        return False
-                if child == 'right':
-                    if node.val < prev:
-                        return False
-                if node.left:
-                    traverse(node.left, node.val, 'left')
-                if node.right:
-                    traverse(node.right, node.val, 'right')
+                if node.val <= lower or node.val >= upper:
+                    return False
+                if not traverse(node.left, lower, node.val):
+                    return False
+                if not traverse(node.right, node.val, upper):
+                    return False
             return True
 
-        return traverse(root, None, None)
+        return traverse(root)
+
 
 # test cases:
 # [1,1]   returns False
