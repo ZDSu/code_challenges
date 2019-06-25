@@ -9,26 +9,30 @@
 #         self.left = None
 #         self.right = None
 
-class Solution:
-    def isValidBST(self, root: TreeNode) -> bool:
-        if not root:
+class Solution(object):
+    def isValidBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+
+        def traverse(node, prev, child):
+            if node:
+                if child == 'left':
+                    if node.val > prev:
+                        return False
+                if child == 'right':
+                    if node.val < prev:
+                        return False
+                if node.left:
+                    traverse(node.left, node.val, 'left')
+                if node.right:
+                    traverse(node.right, node.val, 'right')
             return True
 
-        def _check(curr):
-            if curr.right:
-                if curr.right.val <= curr.val or curr.right.val <= root.val:
-                    return False
-                _check(curr.right)
-            if curr.left:
-                if curr.left.val >= curr.val or curr.left.val <= root.val:
-                    return False
-                _check(curr.left)
-            return True
+        return traverse(root, None, None)
 
-        valid = _check(root)
-        return valid
-
-# test case: 
+# test cases:
 # [1,1]   returns False
 # [10,5,15,null,null,6,20]   returns False
 # [2,1,3]   returns True
