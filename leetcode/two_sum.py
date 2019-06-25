@@ -17,6 +17,7 @@ class Solution:
                     return sorted([i, j])
 
 
+# runtime 40 ms, 81%; memory 14.5 MB, 22%
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -34,6 +35,7 @@ class Solution:
 
 
 # runtime 36 ms, 97%; memory 14.2 MB, 45%
+# runtime 36 ms, 92%; memory 14.3 MB, 48%
 class Solution:
     def twoSum(self, nums, target):
         """
