@@ -45,6 +45,7 @@ class Solution:
 
 
 # after reading solution
+# runtime 60 ms, 32%; memory 12.7 MB, 26%
 class Solution:
     def maxProfit(self, prices):
         """
@@ -61,4 +62,22 @@ class Solution:
             elif prices[i] - low > profit:
                 profit = prices[i] - low
 
+        return profit
+
+
+# runtime 48 ms, 80%; memory 12.5 MB, 70%
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        profit = 0
+        min = float('inf')
+
+        for num in prices:
+            if num < min:
+                min = num
+            elif num - min > profit:
+                profit = num - min
         return profit
