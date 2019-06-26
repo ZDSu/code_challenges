@@ -26,7 +26,6 @@ class BST(object):
                     return
                 curr = curr.left
 
-
     def search(self, find_val):
         curr = self.root
         while curr:
