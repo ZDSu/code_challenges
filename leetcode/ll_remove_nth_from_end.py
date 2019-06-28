@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 # https://leetcode.com/articles/remove-nth-node-from-end-of-list/
 
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
@@ -33,20 +34,13 @@ class Solution:
         return head
 
 # above code doesn't pass last test case below
-# test cases: 
+# test cases:
 # [1], 1  returns []
 # [1,2], 2  returns [2]
 # [1,2], 1  returns [1]
 
 
 # from solution #2 on leetcode:
-
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution:
     def removeNthFromEnd(self, head, n):
         """
@@ -63,4 +57,24 @@ class Solution:
             curr1 = curr1.next
             curr2 = curr2.next
         curr2.next = curr2.next.next
+        return dummy.next
+
+
+# runtime 16 ms, 93%; memory 11.9 MB, 13%
+class Solution(object):
+    def removeNthFromEnd(self, head, n):
+        """
+        :type head: ListNode
+        :type n: int
+        :rtype: ListNode
+        """
+        dummy = ListNode(None)
+        dummy.next = head
+        curr1 = curr2 = dummy
+        for _ in range(n + 1):
+            curr2 = curr2.next
+        while curr2:
+            curr1 = curr1.next
+            curr2 = curr2.next
+        curr1.next = curr1.next.next
         return dummy.next
