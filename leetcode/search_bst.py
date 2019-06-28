@@ -56,9 +56,9 @@ class Solution:
         """
         if not root or not val:
             return
-        
+
         queue = [root]
-        
+
         while queue:
             curr = queue.pop(0)
             if curr.val == val:
@@ -109,3 +109,20 @@ class Solution:
             else:
                 root = root.left
         return
+
+
+# runtime 60 ms, 99%; memory 15.9 MB, 23%
+class Solution(object):
+    def searchBST(self, root, val):
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        while root:
+            if root.val == val:
+                return root
+            elif root.val < val:
+                root = root.right
+            else:
+                root = root.left
