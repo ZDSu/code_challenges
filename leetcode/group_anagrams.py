@@ -22,3 +22,13 @@ class Solution(object):
                 index = sorts[temp]
                 res[index].append(s)
         return res
+
+
+# solution article answer
+# runtime 80 ms, 95%; memory 16.3 MB, 32%
+class Solution(object):
+    def groupAnagrams(self, strs):
+        ans = collections.defaultdict(list)
+        for s in strs:
+            ans[tuple(sorted(s))].append(s)
+        return ans.values()
