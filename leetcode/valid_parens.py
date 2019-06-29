@@ -189,7 +189,7 @@ class Solution:
         return not stack
 
 
-# runtime 16 ms, 92%; memory 11.9 MB, 50%
+# runtime 12 ms, 98%; memory 11.8 MB, 65%
 class Solution(object):
     def isValid(self, s):
         """
@@ -201,9 +201,7 @@ class Solution(object):
 
         for char in s:
             if char in parens:
-                if not stack:
-                    return False
-                if parens[char] != stack.pop():
+                if not stack or parens[char] != stack.pop():
                     return False
             else:
                 stack.append(char)
