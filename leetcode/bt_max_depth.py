@@ -2,7 +2,6 @@
 # https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-problems-recursively/535/
 
 
-# runtime 52 ms, 16%; memory 13.7 MB, 87%
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -10,6 +9,8 @@
 #         self.left = None
 #         self.right = None
 
+# runtime 52 ms, 16%; memory 13.7 MB, 87%
+# runtime 28 ms, 89%; memory 14.4 MB, 95%
 class Solution(object):
     def maxDepth(self, root):
         """
@@ -19,9 +20,8 @@ class Solution(object):
         if not root:
             return 0
 
-        depth = 0
         queue = [root]
-
+        depth = 0
         while queue:
             for _ in range(len(queue)):
                 curr = queue.pop(0)
@@ -30,7 +30,6 @@ class Solution(object):
                 if curr.right:
                     queue.append(curr.right)
             depth += 1
-
         return depth
 
 
