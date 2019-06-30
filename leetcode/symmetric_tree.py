@@ -2,13 +2,9 @@
 # https://leetcode.com/articles/symmetric-tree/
 
 
-# test case:
-# [1,2,2,null,3,null,3]  returns false
-
 # Both solutions are same time [O(n)], 40 ms, 99%
 # space complexity: recursive is O(h) [h = height of tree], iterative is O(n) [n = nodes]
 
-# iterative
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -16,6 +12,8 @@
 #         self.left = None
 #         self.right = None
 
+# iterative
+# runtime 24 ms, 73%; memory 12.1 MB, 29%
 class Solution:
     def isSymmetric(self, root):
         """
@@ -54,3 +52,25 @@ class Solution:
             return (t1.val == t2.val) and isMirror(t1.right, t2.left) and isMirror(t1.left, t2.right)
 
         return isMirror(root, root)
+
+
+# runtime 16 ms, 97%; memory 11.9 MB, 82%
+class Solution(object):
+    def isSymmetric(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if not root:
+            return True
+
+        def compare(node1, node2):
+            if not node1 and not node2:
+                return True
+            if not node1 or not node2:
+                return False
+            return node1.val == node2.val and \
+                compare(node1.left, node2.right) and \
+                compare(node2.left, node1.right)
+
+        return compare(root, root)
