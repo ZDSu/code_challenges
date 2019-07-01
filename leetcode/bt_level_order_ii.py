@@ -9,6 +9,7 @@
 #         self.right = None
 
 # runtime: 60 ms, 16%; memory: 13.5 MB, 5%
+# runtime: 16 ms, 98%; memory: 12.2 MB, 80%
 class Solution:
     def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
         if not root:
