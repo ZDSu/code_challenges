@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/same-tree/description/
+# https://leetcode.com/articles/same-tree/
+
 
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -19,10 +21,10 @@ class Solution(object):
             return False
         if not p and not q:
             return True
-        
+
         queue1 = [p]
         queue2 = [q]
-        
+
         while queue1:
             curr1 = queue1.pop(0)
             curr2 = queue2.pop(0)
@@ -37,12 +39,12 @@ class Solution(object):
                 queue1.append(curr1.right)
                 queue2.append(curr2.right)
             elif (curr1.right and not curr2.right) or (curr2.right and not curr1.right):
-                return False                
+                return False
         return True
 
 
-# test cases: 
-# [] [] 
+# test cases:
+# [] []
 # [1,2] [1, null, 2]
 # [1] []
 # [2,null,4] [2,3,4]
@@ -66,7 +68,7 @@ def isSameTree(self, p, q):
         if not p and not q:
             continue
 
-	if p and q:   
+	if p and q:
 	    if p.val != q.val:
 		return False
 	    else:
@@ -76,7 +78,7 @@ def isSameTree(self, p, q):
 	    return False
 
     return True
-    
+
 
 
 class Solution:
@@ -93,7 +95,7 @@ class Solution:
 
         qp = [p]
         qq = [q]
-        
+
         while qp:
             currp = qp.pop(0)
             currq = qq.pop(0)
@@ -111,7 +113,7 @@ class Solution:
                 qq.append(currq.right)
             elif (currp.right and not currq.right) or (currq.right and not currp.right):
                 return False
-        
+
         return True
 
 
