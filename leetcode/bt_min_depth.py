@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/minimum-depth-of-binary-tree/submissions/
+# https://leetcode.com/problems/minimum-depth-of-binary-tree/
 
 
 # Definition for a binary tree node.
@@ -8,14 +8,19 @@
 #         self.left = None
 #         self.right = None
 
-class Solution:
-    def minDepth(self, root: TreeNode) -> int:
+# runtime: 32 ms, 87%; memory 14.4 MB, 90%
+class Solution(object):
+    def minDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
         if not root:
             return 0
 
         depth = 0
+        minimum = float('inf')
         queue = [root]
-
         while queue:
             for _ in range(len(queue)):
                 curr = queue.pop(0)
@@ -23,8 +28,12 @@ class Solution:
                     queue.append(curr.left)
                 if curr.right:
                     queue.append(curr.right)
+                if not curr.left and not curr.right:
+                    if depth + 1 < minimum:
+                        minimum = depth + 1
             depth += 1
-        return depth
+        return minimum
+
 
 # test cases:
 # [0]  returns 1
