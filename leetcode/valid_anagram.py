@@ -94,6 +94,33 @@ class Solution:
         return not s_chars
 
 
+# runtime 52 ms, 79%; memory 13.3 MB, 68%
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s) != len(t):
+            return False
+
+        count = {}
+        for char in s:
+            if char in count:
+                count[char] += 1
+            else:
+                count[char] = 1
+
+        for char in t:
+            if char not in count:
+                return False
+            if count[char] == 1:
+                del count[char]
+            else:
+                count[char] -= 1
+        return not count
+
 
 # runtime 96 ms, 6%; memory 13.2 MB, 32%
 import collections
