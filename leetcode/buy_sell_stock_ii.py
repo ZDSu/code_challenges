@@ -10,11 +10,11 @@ class Solution:
         """
         if not prices:
             return 0
-        
+
         low = prices[0]
         high = None
         profit = 0
-        
+
         for i in range(1, len(prices)):
             if prices[i] < prices[i - 1]:
                 if high:
@@ -30,7 +30,36 @@ class Solution:
         return profit
 
 
-# based on solution 3  (same runtime as above solution)
+# runtime 52 ms, 52%; memory 12.6 MB, 51%
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        if not prices:
+            return 0
+
+        profit = 0
+        low = prices[0]
+        high = None
+
+        for i in range(1, len(prices)):
+            if prices[i] < low and not high:
+                low = prices[i]
+            elif prices[i] > high:
+                high = prices[i]
+            else:  # prices[i] < low and high
+                profit += high - low
+                low = prices[i]
+                high = None
+        if high:
+            profit += high - low
+        return profit
+
+
+# based on solution 3
+# runtime 48 ms, 77%; memory 12.6 MB, 67%
 class Solution:
     def maxProfit(self, prices):
         """
@@ -39,7 +68,7 @@ class Solution:
         """
         if not prices:
             return 0
-        
+
         profit = 0
         for i in range(1, len(prices)):
             if prices[i] > prices[i - 1]:
