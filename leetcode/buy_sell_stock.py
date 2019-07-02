@@ -37,12 +37,6 @@ class Solution:
             return 0
         return profit
 
-# test cases:
-# [7,6,4,3,1] returns 0
-# [] returns 0
-# [2,4,1]  returns 2
-# [2,1,2,1,0,1,2]  returns 2
-
 
 # after reading solution
 # runtime 60 ms, 32%; memory 12.7 MB, 26%
@@ -103,3 +97,30 @@ class Solution(object):
             elif num - low > profit:
                 profit = num - low
         return profit
+
+
+# runtime 40 ms, 99%; memory 12.6 MB, 42%
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        if not prices:
+            return 0
+
+        profit = 0
+        curr = prices[0]
+        for i in range(1, len(prices)):
+            if prices[i] < curr:
+                curr = prices[i]
+            else:
+                if prices[i] - curr > profit:
+                    profit = prices[i] - curr
+        return profit
+
+
+# test cases:
+# [] returns 0
+# [2,4,1]  returns 2
+# [2,1,2,1,0,1,2]  returns 2
