@@ -33,6 +33,22 @@ class Solution(object):
         return depth
 
 
+# after Pathrise lesson
+# runtime 20 ms, 99%; memory 14.7 MB, 35%
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if not root:
+            return 0
+
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
+
+        return max(left, right) + 1
+
 # test cases:
 # []
 # [1,2,3,4,5]  root: 1; next level: 2, 3;  next level: 4,5 are children of 2
