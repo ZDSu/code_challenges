@@ -74,3 +74,58 @@ class Solution(object):
                 compare(node2.left, node1.right)
 
         return compare(root, root)
+
+
+# Pathrise solution
+# runtime 16 ms, 93%; memory 12 MB, 64%
+class Solution(object):
+    def areEqual(self, node1, node2):
+        if not node1 and not node2:
+            return True
+        if not node1 or not node2:
+            return False
+
+        left = self.areEqual(node1.left, node2.right)
+        right = self.areEqual(node1.right, node2.left)
+
+        return left is True and right is True and node1.val == node2.val
+
+
+    def isSymmetric(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if not root: return True
+        if not root.left and not root.right:
+            return True
+        return self.areEqual(root.left, root.right)
+
+
+# Pathrise solution with early exit
+# runtime 20 ms, 77%; memory 12.2 MB, 7%
+class Solution(object):
+    def areEqual(self, node1, node2):
+        if not node1 and not node2: return True
+        if not node1 or not node2: return False
+        if node1.val != node2.val:
+            return False
+
+        left = self.areEqual(node1.left, node2.right)
+        right = self.areEqual(node1.right, node2.left)
+
+        return left and right
+
+
+    def isSymmetric(self, root):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if not root: return True
+        if not root.left and not root.right:
+            return True
+        return self.areEqual(root.left, root.right)
+
+
+# test case: [1]  returns True
