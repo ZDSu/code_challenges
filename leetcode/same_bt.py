@@ -182,3 +182,47 @@ class Solution:
         if p.val != q.val:
             return False
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+
+# Pathrise solution
+# runtime 16 ms, 75%; memory 11.9 MB, 23%
+class Solution(object):
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        # Base case
+        if not p and not q: return True
+        if not p or not q: return False
+
+        # Request
+        left = self.isSameTree(p.left, q.left)
+        right = self.isSameTree(p.right, q.right)
+
+        # Return
+        return left is True and right is True and p.val == q.val
+
+
+# Pathrise solution with early exit, doing processing earlier [supposed to be faster]
+# runtime 20 ms, 43%; memory 11.9 MB, 18%
+class Solution(object):
+    def isSameTree(self, p, q):
+        """
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        # Base case
+        if not p and not q: return True
+        if not p or not q: return False
+        if p.val != q.val:
+            return False
+
+        # Request
+        left = self.isSameTree(p.left, q.left)
+        right = self.isSameTree(p.right, q.right)
+
+        # Return
+        return left is True and right is True
