@@ -29,3 +29,11 @@ class Solution:
         for i in range(len(A)):
             res.append(a[A[i]])
         return res
+
+
+# condensed code from solution
+# runtime 40 ms, 74%; memory 13.8 MB, 25%
+class Solution:
+    def anagramMappings(self, A: List[int], B: List[int]) -> List[int]:
+        D = {x: i for i, x in enumerate(B)}
+        return [D[x] for x in A]
