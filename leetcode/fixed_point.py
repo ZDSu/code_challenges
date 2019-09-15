@@ -34,6 +34,7 @@ class Solution:
 
 
 # runtime 64 ms, 99%; memory 15 MB, 25%
+# runtime 68 ms, 95%; memory 15.2 MB, 25%
 class Solution:
     def fixedPoint(self, A: List[int]) -> int:
         left = 0
@@ -45,6 +46,31 @@ class Solution:
                 if mid < res:
                     res = mid
                     right = mid
+            elif A[mid] > mid:
+                right = mid
+            else:
+                left = mid
+
+        if A[left] == left:
+            return left
+        if A[right] == right:
+            return right
+        return -1
+
+
+# runtime 76 ms, 62%; memory 15.2 MB, 25%
+# doesn't make sense why this is slower than above
+# runtime 84 ms, 9%; memory 15.3 MB, 25%
+class Solution:
+    def fixedPoint(self, A: List[int]) -> int:
+        left = 0
+        res = right = len(A) - 1
+
+        while left + 1 < right:
+            mid = (left + right) // 2
+            if A[mid] == mid:
+                res = mid
+                right = mid
             elif A[mid] > mid:
                 right = mid
             else:
