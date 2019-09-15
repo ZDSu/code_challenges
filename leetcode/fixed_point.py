@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/fixed-point (Premium)
+
+
 """
 Fixed Point
 Given an array A of distinct integers sorted in ascending order, return the smallest index i that satisfies A[i] == i. Return -1 if no such i exists.
@@ -82,4 +85,7 @@ class Solution:
             return right
         return -1
 
+
 # [] is not a test case thankfully!
+# test case:
+# [0,1,3,7,8,9]  returns 0
