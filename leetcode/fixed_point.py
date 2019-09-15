@@ -21,7 +21,7 @@ Note:
 1. 1 <= A.length < 10^4
 2. -10^9 <= A[i] <= 10^9
 
-My custom test case: [-10, 1, 2, 5, 10] should return 1 but returns 2
+My custom test case: [-10, 1, 2, 5, 10]
 """
 
 # runtime 72 ms, 87%; memory 14.9 MB, 25%
@@ -31,3 +31,29 @@ class Solution:
             if A[i] == i:
                 return i
         return -1
+
+
+# runtime 64 ms, 99%; memory 15 MB, 25%
+class Solution:
+    def fixedPoint(self, A: List[int]) -> int:
+        left = 0
+        res = right = len(A) - 1
+
+        while left + 1 < right:
+            mid = (left + right) // 2
+            if A[mid] == mid:
+                if mid < res:
+                    res = mid
+                    right = mid
+            elif A[mid] > mid:
+                right = mid
+            else:
+                left = mid
+
+        if A[left] == left:
+            return left
+        if A[right] == right:
+            return right
+        return -1
+
+# [] is not a test case thankfully!
