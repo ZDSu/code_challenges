@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/subsets/
 
 
+# (both are p@thr1se solutions)
 # runtime 36 ms, 92%, memory 13.8 MB, 6%
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
