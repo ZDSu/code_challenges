@@ -95,3 +95,47 @@ class Solution:
             res.append(temp)
         return res
 # doesn't pass [0,2,1,3,null,5,22,9,4,12,25,null,null,13,14,8,6,null,null,null,null,null,27,24,26,null,17,7,null,28,null,null,null,null,null,19,null,11,10,null,null,null,23,16,15,20,18,null,null,null,null,null,21,null,null,29] because there are 3 nodes with the same x,y  [passing 20/30 tests]
+
+
+"""
+Solution
+Approach 1: Store Locations
+
+Intuition
+It's evident that there are two steps in a straightforward solution: first, find the location of every node, then report their locations.
+
+Algorithm
+To find the location of every node, we can use a depth-first search. During the search, we will maintain the location (x, y) of the node. As we move from parent to child, the location changes to (x-1, y+1) or (x+1, y+1) depending on if it is a left child or right child. [We use y+1 to make our sorting by decreasing y easier.]
+
+To report the locations, we sort them by x coordinate, then y coordinate, so that they are in the correct order to be added to our answer.
+
+Please see the inline comments for more details.
+
+<solution below>
+
+Complexity Analysis
+- Time Complexity: O(N*logN), where N is the number of nodes in the given tree.
+- Space Complexity: O(N).
+"""
+
+class Solution(object):
+    def verticalTraversal(self, root):
+        seen = collections.defaultdict(
+                  lambda: collections.defaultdict(list))
+
+        def dfs(node, x=0, y=0):
+            if node:
+                seen[x][y].append(node)
+                dfs(node.left, x-1, y+1)
+                dfs(node.right, x+1, y+1)
+
+        dfs(root)
+        ans = []
+
+        for x in sorted(seen):
+            report = []
+            for y in sorted(seen[x]):
+                report.extend(sorted(node.val for node in seen[x][y]))
+            ans.append(report)
+
+        return ans
