@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/design-linked-list/description/
+# https://leetcode.com/articles/design-linked-list/
 
 
 # blank ()
@@ -8,7 +9,7 @@ class MyLinkedList:
         """
         Initialize your data structure here.
         """
-        
+
 
     def get(self, index):
         """
@@ -16,7 +17,7 @@ class MyLinkedList:
         :type index: int
         :rtype: int
         """
-        
+
 
     def addAtHead(self, val):
         """
@@ -24,7 +25,7 @@ class MyLinkedList:
         :type val: int
         :rtype: void
         """
-        
+
 
     def addAtTail(self, val):
         """
@@ -32,7 +33,7 @@ class MyLinkedList:
         :type val: int
         :rtype: void
         """
-        
+
 
     def addAtIndex(self, index, val):
         """
@@ -41,7 +42,7 @@ class MyLinkedList:
         :type val: int
         :rtype: void
         """
-        
+
 
     def deleteAtIndex(self, index):
         """
@@ -49,7 +50,7 @@ class MyLinkedList:
         :type index: int
         :rtype: void
         """
-        
+
 
 
 # Your MyLinkedList object will be instantiated and called as such:
@@ -92,7 +93,7 @@ class MyLinkedList:
             return -1
         if index == 0:
             return self.head
-        
+
         curr = self.head
         for _ in range(1, index + 1):
             curr = curr.next
@@ -135,17 +136,17 @@ class MyLinkedList:
         """
         if index > self.size:
             return
-            
+
         if index == self.size:
             return self.addAtTail(val)
-        
+
         if index == 0:
             return self.addAtHead(val)
-        
+
         curr = self.head
         for idx in range(1, index - 1):
             curr = curr.next
-        
+
         node = Node(val)
         node.next = curr.next
         curr.next = node
@@ -162,13 +163,13 @@ class MyLinkedList:
         """
         if index > self.size:
             return
-        
+
         if index == 0:
             self.head = self.head.next
             if not self.head:
                 self.tail = None
             return
-        
+
         curr = self.head
         for _ in range(1, index - 1):
             curr = curr.next
@@ -176,7 +177,7 @@ class MyLinkedList:
             curr = self.tail
         else:
             curr.next = curr.next.next
-        
+
         self.size -= 1
 
 
@@ -187,4 +188,3 @@ class MyLinkedList:
 # obj.addAtTail(val)
 # obj.addAtIndex(index,val)
 # obj.deleteAtIndex(index)
-

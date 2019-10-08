@@ -1,4 +1,5 @@
-# https://leetcode.com/problems/fibonacci-number/submissions/
+# https://leetcode.com/problems/fibonacci-number/
+# https://leetcode.com/problems/fibonacci-number/solution/
 
 
 # runtime 36 ms, 79%; memory 13.4 MB, 5%
