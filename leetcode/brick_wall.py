@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/brick-wall/
+# https://leetcode.com/articles/brick-wall  (Premium)
+
 
 class Solution:
     def leastBricks(self, wall):
