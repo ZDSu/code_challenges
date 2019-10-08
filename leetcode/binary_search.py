@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/binary-search/
+# https://leetcode.com/articles/binary-search
 
 
 class Solution:
