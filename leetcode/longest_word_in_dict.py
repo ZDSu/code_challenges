@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/longest-word-in-dictionary/description/
+# https://leetcode.com/articles/longest-word-in-dictionary/
 
 
 class Solution:

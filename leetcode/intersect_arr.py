@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/intersection-of-two-arrays/description/
+# https://leetcode.com/articles/intersection-of-two-arrays
 
 
 # runtime 40 ms, 74%; memory 13.2 MB, 5%
