@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+# https://leetcode.com/articles/two-sum-ii-input-array-is-sorted (Premium)
 
 
 # runtime 52 ms, 66%; memory 12 MB, 70%
