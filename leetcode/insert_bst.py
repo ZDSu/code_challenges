@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/insert-into-a-binary-search-tree/description/
+# https://leetcode.com/articles/insert-into-a-bst  (Premium)
 
 
 # Definition for a binary tree node.
