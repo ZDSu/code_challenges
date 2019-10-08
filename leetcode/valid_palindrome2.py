@@ -1,7 +1,8 @@
 # https://leetcode.com/problems/valid-palindrome-ii/description/
+# https://leetcode.com/articles/valid-palindrome-ii
+
+
 # solution passes all but 2 test cases
-
-
 class Solution(object):
     def validPalindrome(self, s):
         """
@@ -11,7 +12,7 @@ class Solution(object):
         i = 0
         j = len(s) - 1
         delete = 1
-        
+
         while i < j:
             if s[i] != s[j]:
                 if s[i + 1] == s[j] and delete:

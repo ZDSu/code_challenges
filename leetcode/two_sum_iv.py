@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
+# https://leetcode.com/articles/two-sum-iv
 
 
 # runtime 72 ms, 79%; memory 16.1 MB, 95%
