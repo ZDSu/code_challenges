@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/sqrtx/description/
+# https://leetcode.com/articles/sqrtx/
 
 
 class Solution:
@@ -7,4 +8,4 @@ class Solution:
         :type x: int
         :rtype: int
         """
-        return int(math.sqrt(x))      
+        return int(math.sqrt(x))
