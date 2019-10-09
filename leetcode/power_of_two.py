@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/power-of-two/
+# https://leetcode.com/articles/power-of-two/ (Premium)
 
 
 class Solution:
@@ -7,11 +8,11 @@ class Solution:
         :type n: int
         :rtype: bool
         """
-        if (n == 0): 
+        if (n == 0):
             return False
 
-        while (n != 1): 
-            if (n % 2 != 0): 
+        while (n != 1):
+            if (n % 2 != 0):
                 return False
             n = n // 2
 
