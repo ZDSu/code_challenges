@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/path-sum/description/
+# https://leetcode.com/articles/path-sum  (Premium)
 # (401-Java whiteboard final)
 
 
@@ -18,25 +19,25 @@ class Solution:
         """
         if not root:
             return False
-        
-        def _walk(node, temp): 
+
+        def _walk(node, temp):
             if node is None:
                 return
-            
+
             temp += node.val
             if temp == target and node.left is None and node.right is None:
                 return True
-            
-            if node.left:               
+
+            if node.left:
                 status = _walk(node.left, temp)
                 if status is True:
                     return True
-                
+
             if node.right:
                 status = _walk(node.right, temp)
                 if status is True:
                     return True
-            
+
             return False
         return _walk(root, 0)
 
