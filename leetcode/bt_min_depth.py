@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/minimum-depth-of-binary-tree/
+# https://leetcode.com/articles/minimum-depth-of-binary-tree  (Premium)
 
 
 # Definition for a binary tree node.
