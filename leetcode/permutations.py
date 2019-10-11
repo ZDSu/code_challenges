@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/permutations/
+# https://leetcode.com/articles/permutations  (Premium)
 
 
 # p@thr1se solution
