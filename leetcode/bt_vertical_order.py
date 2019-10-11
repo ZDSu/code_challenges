@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+# https://leetcode.com/articles/vertical-order-traversal-of-a-binary-tree/
 # this challenge is #987. #314 is similar. Difference is:
 #  314: If two nodes are in the same row and column, the order should be from left to right. (also only for premium users)
 # 987: If two nodes have the same position, then the value of the node that is reported first is the value that is smaller.
