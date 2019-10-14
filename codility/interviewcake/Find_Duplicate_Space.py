@@ -1,5 +1,5 @@
 """
-Find a duplicate, Space Edition™.
+Find a duplicate, Space Edition™. [see PDF]
 
 We have a list of integers, where:
 1. The integers are in the range 1..n
@@ -11,6 +11,46 @@ Write a function which finds an integer that appears more than once in our list.
 
 We're going to run this function on our new, super-hip MacBook Pro With Retina Display™. Thing is, the damn thing came with the RAM soldered right to the motherboard, so we can't upgrade our RAM. So we need to optimize for space!
 """
+
+# Editor Code
+import unittest
+
+
+def find_repeat(numbers):
+
+    # Find a number that appears more than once
+
+
+    return 0
+
+
+
+# Tests
+
+class Test(unittest.TestCase):
+
+    def test_just_the_repeated_number(self):
+        actual = find_repeat([1, 1])
+        expected = 1
+        self.assertEqual(actual, expected)
+
+    def test_short_list(self):
+        actual = find_repeat([1, 2, 3, 2])
+        expected = 2
+        self.assertEqual(actual, expected)
+
+    def test_medium_list(self):
+        actual = find_repeat([1, 2, 5, 5, 5, 5])
+        expected = 5
+        self.assertEqual(actual, expected)
+
+    def test_long_list(self):
+        actual = find_repeat([4, 1, 4, 8, 3, 2, 7, 6, 5])
+        expected = 4
+        self.assertEqual(actual, expected)
+
+
+unittest.main(verbosity=2)
 
 
 # My attempted solution:
