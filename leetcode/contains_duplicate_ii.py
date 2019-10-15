@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/contains-duplicate-ii/description/
+# https://leetcode.com/articles/contains-duplicate-ii  (Premium)
 
 
 # beats all but one test case with Time Limit Exceeded
