@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
+# https://leetcode.com/articles/maximum-depth-of-n-ary-tree
 
 
 # runtime 100 ms, 18%; memory 17.7 MB, 5%
