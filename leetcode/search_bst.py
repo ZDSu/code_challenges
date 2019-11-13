@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/search-in-a-binary-search-tree/description/
 # Note: just need to return the node when the value is found and the subtree of that node is done automatically. I thought I had to make a list with the node and it's subtree nodes after so was over complicating it!
+# https://leetcode.com/articles/search-in-a-bst/ (Premium)
 
 
 # Definition for a binary tree node.
